@@ -82,11 +82,11 @@ function Skills() {
           </h1>
         </div>
 
-        <div className="flex h-full w-full flex-col sm:flex-row sm:flex-wrap  sm:justify-center gap-8 items-center bg-neutral-200  ">
+        <div className="flex h-full w-full  flex-col sm:flex-row sm:flex-wrap  sm:justify-center gap-8 items-center bg-neutral-200  ">
           {Data?.map((el, id) => {
             return (
               <div
-                className="  w-96 flex-col px-4 sm:px-0 flex   overflow-hidden shadow-slate-400"
+                className="  w-96 sm:w-3/12  border-2 border-black  flex-col px-4 sm:px-0 flex   overflow-hidden shadow-slate-400"
                 key={id}
               >
                 <img
@@ -106,10 +106,10 @@ function Skills() {
                   >
                     <h4>{el.circle_text}</h4>
                   </div>
-                  <h1 className="text-2xl hover:text-purple-700  transition duration-300 sm:text-3xl px-1 font-bold ">
+                  <h1 className="text-2xl hover:text-purple-700  transition duration-300 sm:text-3xl px-1  font-bold ">
                     {el.header}
                   </h1>
-                  <a className="self-start px-5 hover:text-black transition duration-300  text-slate-500 ">
+                  <a className="self-start  px-9 sm:px-5   hover:text-black transition duration-300 font-bold  text-slate-500 ">
                     {el.heading}
                   </a>
                 </div>
