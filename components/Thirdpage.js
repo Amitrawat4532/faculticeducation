@@ -30,7 +30,7 @@ function Thirdpage() {
             <div className="gap-1 sm:gap-5 flex flex-col">
               <h5 className="text-1xl font-bold">WHAT WE DO</h5>
               <h1 className=" text-3xl   sm:text-6xl font-bold">
-                We make sure it's easy to learn.
+                We make sure it&apos;s easy to learn.
               </h1>
             </div>
             <p>
