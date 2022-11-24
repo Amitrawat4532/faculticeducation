@@ -5,7 +5,7 @@ function Skills() {
     {
       img: "https://facultic.ancorathemes.com/wp-content/uploads/2021/10/course1-copyright-890x664.jpg",
       header: "Data visualization course",
-      heading: "byKelly Anderson",
+      heading: "By Kelly Anderson",
       lesson: "3 lesson",
       person: "30 person",
       circle_text: "$99.00",
@@ -13,7 +13,7 @@ function Skills() {
     {
       img: "https://facultic.ancorathemes.com/wp-content/uploads/2021/10/course1-copyright-890x664.jpg",
       header: "Data visualization course",
-      heading: "byKelly Anderson",
+      heading: "By Kelly Anderson",
       lesson: "3 lesson",
       person: "30 person",
       circle_text: "$99.00",
@@ -21,7 +21,7 @@ function Skills() {
     {
       img: "https://facultic.ancorathemes.com/wp-content/uploads/2021/10/course1-copyright-890x664.jpg",
       header: "Data visualization course",
-      heading: "byKelly Anderson",
+      heading: "By Kelly Anderson",
       lesson: "3 lesson",
       person: "30 person",
       circle_text: "$99.00",
@@ -74,8 +74,8 @@ function Skills() {
   return (
     <>
       {/* bg-neutral-200 */}
-      <div className="h-full w-screen flex justify-start  items-center  flex-col gap-12 bg-neutral-200 ">
-        <div className="flex justify-center  items-center flex-col  w-11/12  h-40 gap-5 ">
+      <div className="h-full w-screen flex justify-start  items-center  flex-col gap-8 bg-neutral-200 ">
+        <div className="flex justify-center  items-center flex-col  w-11/12  h-36 gap-5 ">
           <h4 className="text-1xl font-bold">WHAT WE TEACH</h4>
           <h1 className="text-2xl sm:text-6xl font-bold">
             Upgrade Your Skills
@@ -94,13 +94,13 @@ function Skills() {
                   src={el.img}
                   className="h-80 w-96   transition duration-500 hover:scale-124"
                 />
-                <div className=" h-36 w-1/1  flex justify-center items-center flex-col gap-5 relative bg-white ">
+                <div className=" h-32 w-1/1  flex justify-center items-center flex-col gap-4 relative bg-white ">
                   <div
                     className="bg-black flex justify-center items-center p-10  text-cyan-50 text-center h-14 w-14 "
                     style={{
                       position: "absolute",
                       right: "20px",
-                      top: "-26%",
+                      top: "-33%",
                       borderRadius: "50%",
                     }}
                   >
