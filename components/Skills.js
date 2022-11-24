@@ -86,7 +86,7 @@ function Skills() {
           {Data?.map((el, id) => {
             return (
               <div
-                className="  w-96 sm:w-3/12  border-2 border-black  flex-col px-4 sm:px-0 flex   overflow-hidden shadow-slate-400"
+                className="  w-96 sm:w-3/12    flex-col px-4 sm:px-0 flex   overflow-hidden shadow-slate-400"
                 key={id}
               >
                 <img
