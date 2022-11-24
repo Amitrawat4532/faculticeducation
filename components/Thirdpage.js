@@ -38,7 +38,10 @@ function Thirdpage() {
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
               exercitation ullamco.
             </p>
-            <button className="bg-blue-700 w-44 h-12 text-white   rounded-3xl">
+            <button
+              className="bg-blue-700 w-44 h-12 text-white  transition duration-600  rounded-3xl"
+              id="btn"
+            >
               About us
             </button>
           </div>
