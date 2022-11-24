@@ -85,15 +85,15 @@ function Skills() {
           {Data?.map((el, id) => {
             return (
               <div
-                className="  w-96 flex-col px-4 sm:px-0 flex hover:bg-slate-400  overflow-hidden"
+                className="  w-96 flex-col px-4 sm:px-0 flex   overflow-hidden"
                 key={id}
               >
                 <img
                   id="zoom"
                   src={el.img}
-                  className="h-80 w-96  hover:bg-slate-400 transition duration-500 hover:scale-124"
+                  className="h-80 w-96   transition duration-500 hover:scale-124"
                 />
-                <div className=" h-40 w-1/1  flex justify-center items-center flex-col gap-8 relative bg-white">
+                <div className=" h-40 w-1/1  flex justify-center items-center flex-col gap-10 relative bg-white">
                   <div
                     className="bg-black flex justify-center items-center p-10  text-cyan-50 text-center h-14 w-14 "
                     style={{
@@ -105,10 +105,10 @@ function Skills() {
                   >
                     <h4>{el.circle_text}</h4>
                   </div>
-                  <h1 className="text-2xl hover:text-purple-700 sm:text-3xl px-6 font-bold ">
+                  <h1 className="text-2xl hover:text-purple-700  transition duration-300 sm:text-3xl px-1 font-bold ">
                     {el.header}
                   </h1>
-                  <a className="self-start px-11 sm:px-8 hover:text-black  text-slate-500 ">
+                  <a className="self-start px-11 sm:px-8 hover:text-black transition duration-300  text-slate-500 ">
                     {el.heading}
                   </a>
                 </div>

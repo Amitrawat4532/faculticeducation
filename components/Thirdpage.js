@@ -48,7 +48,7 @@ function Thirdpage() {
               return (
                 <>
                   <div
-                    className="h-auto py-4 w-full  flex flex-col-reverse sm:flex-row justify-between sm:items-start  px-4 gap-4 sm:gap-4 "
+                    className="h-auto py-4 w-full  flex flex-col-reverse sm:flex-row  justify-around sm:justify-between  sm:items-start  px-4 gap-4 sm:gap-4 "
                     key={id}
                   >
                     <div className="flex flex-row sm:flex-row gap-5">
