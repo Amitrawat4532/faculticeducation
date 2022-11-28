@@ -66,12 +66,12 @@ function Services() {
         </div>
 
         {/* 2nd box */}
-        <div className="w-full  flex justify-start px-3 sm:px-3 lg:px-20  py-6 flex-wrap gap-10 sm:gap-10 md:gap-28 flex-col sm:flex-row">
+        <div className="w-full  flex justify-start px-3 sm:px-3 lg:px-20  py-6 flex-wrap gap-10 sm:gap-10 md:gap-2 flex-col sm:flex-row">
           {/* <div className="h-full w-full sm:px-12 gap-10  flex  flex-col sm:flex-row   border-2 border-blue-700"> */}
           {Data.map((el, id) => {
             return (
               <div
-                className=" px-2 sm:px-3  flex flex-col  gap-8 relative overflow-hidden"
+                className=" px-2 sm:pl-2 pr-28 mx-4  flex flex-col  gap-8 relative overflow-hidden"
                 key={id}
               >
                 <img src={el.img} className="h-24 w-24"></img>
@@ -83,7 +83,7 @@ function Services() {
                     {el.headerOne}
                   </h2>
                 </div>
-                <a className="text-2xl font-extrabold read_more"></a>
+                <a className="text-2xl font-bold read_more"></a>
               </div>
             );
           })}

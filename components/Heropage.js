@@ -1,9 +1,9 @@
 import React from "react";
-
+import { motion, useScroll } from "framer-motion";
 function Heropage() {
   return (
     <>
-      <div>
+      <div className="stickey">
         <svg
           className="trx_addons_shape bg-indigo-700 "
           xmlns="http://www.w3.org/2000/svg"
@@ -16,8 +16,24 @@ function Heropage() {
           ></path>
         </svg>
       </div>
-      <div className="  h-screen bg-indigo-700 flex justify-center relative">
-        <div className=" items-center h-96 absolute top-20 w-11/12  flex justify-center flex-col gap-5">
+      <motion.div
+        className="  h-screen bg-indigo-700 flex justify-center relative rounded-full "
+        animate={{
+          scale: [1, 2, 2, 1, 1],
+          rotate: [0, 0, 360, 360, 0],
+          borderRadius: ["0%", "0%", "50%", "50%", "0%"],
+        }}
+
+        // transition={{
+        //   duration: 2,
+        //   ease: "easeInOut",
+        //   times: [0, 0.2, 0.5, 0.8, 1],
+        //   repeat: Infinity,
+        //   repeatDelay: 1,
+        // }}
+        // initial={{ opacity: "10" }}
+      >
+        <motion.div className=" items-center h-96 absolute top-20 w-11/12  flex justify-center flex-col gap-5">
           <h2 className="text-white text-1xl sm:text-2xl lg:text-2xl">
             Consectetur adipiscing elit.
           </h2>
@@ -45,7 +61,7 @@ function Heropage() {
               </a>
             </label>
           </div>
-        </div>
+        </motion.div>
         <div className="absolute bottom-10 left-16 rotate-90 hidden  lg:block">
           <img src="https://facultic.ancorathemes.com/wp-content/uploads/2022/03/shape-05.svg"></img>
         </div>
@@ -59,7 +75,7 @@ function Heropage() {
         <div className="absolute bottom-12 right-6 hidden lg:block">
           <img src="https://facultic.ancorathemes.com/wp-content/uploads/2022/03/shape-04.svg"></img>
         </div>
-      </div>
+      </motion.div>
       <div>
         <svg
           className="trx_addons_shape bg-indigo-700 rotate-180"
