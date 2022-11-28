@@ -1,4 +1,5 @@
 import Heropage from "../components/Heropage";
+import Services from "../components/Services";
 import Skills from "../components/Skills";
 import Thirdpage from "../components/Thirdpage";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <Heropage />
       <Skills />
       <Thirdpage />
+      <Services />
     </>
   );
 }
