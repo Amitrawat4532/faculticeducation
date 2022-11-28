@@ -34,7 +34,7 @@ export default function Motion() {
         animate={{ opacity: 1 }}
         id="motion_container"
       >
-        <motion.div className="w-96 h-96 bg-white border-2 border-black">
+        <motion.div className="w-96 h-96 bg-white border-2 border-black flex flex-col justify-center items-center">
           <h1>Hey this is dummy text1</h1>
           <h2>Hey this is dummy text2</h2>
 
