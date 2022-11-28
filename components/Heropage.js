@@ -23,15 +23,14 @@ function Heropage() {
           rotate: [0, 0, 360, 360, 0],
           borderRadius: ["0%", "0%", "50%", "50%", "0%"],
         }}
+        transition={{
+          duration: 2,
+          ease: "easeInOut",
+          times: [0, 0.2, 0.5, 0.8, 1],
 
-        // transition={{
-        //   duration: 2,
-        //   ease: "easeInOut",
-        //   times: [0, 0.2, 0.5, 0.8, 1],
-        //   repeat: Infinity,
-        //   repeatDelay: 1,
-        // }}
-        // initial={{ opacity: "10" }}
+          repeatDelay: 1,
+        }}
+        initial={{ opacity: "10" }}
       >
         <motion.div className=" items-center h-96 absolute top-20 w-11/12  flex justify-center flex-col gap-5">
           <h2 className="text-white text-1xl sm:text-2xl lg:text-2xl">
