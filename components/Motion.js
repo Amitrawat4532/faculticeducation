@@ -10,7 +10,7 @@ export default function Motion() {
     <>
       <div className="h-full w-full flex justify-center bg-transparent  z-10 overflow-hidden">
         <motion.div
-          className="  rounded-full bg-white  flex justify-center items-center fixed z-10 overflow-hidden"
+          className=" border-2  border-black rounded-full bg-white  flex justify-center items-center fixed z-10 overflow-hidden"
           style={{
             // scaleX: scrollYProgress,
             width: scrollY,
