@@ -74,7 +74,7 @@ function Skills() {
   return (
     <>
       {/* bg-neutral-200 */}
-      <div className="h-full w-screen flex justify-start  items-center  flex-col gap-8 bg-white">
+      <div className="h-full w-screen flex justify-center  items-center  flex-col gap-8 bg-white">
         <div className="flex justify-center  items-center flex-col  w-11/12  h-36 gap-5 ">
           <h4 className="text-1xl font-bold">WHAT WE TEACH</h4>
           <h1 className="text-2xl sm:text-6xl font-bold">

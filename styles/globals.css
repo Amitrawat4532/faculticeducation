@@ -53,9 +53,13 @@ transition: all 0.6s ease;
 #btn:hover{
   background-color: blue;
 }
-
+/* 
 #motion_container{
   height: 100vmin;
   width: 100vmin;
  
+} */
+#motion_container{
+  top:50%;
+  transform: translateY(-50%)
 }

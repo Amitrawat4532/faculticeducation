@@ -1,6 +1,10 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
+import { Parallax, ParallaxLayer } from "@react-spring/Parallax";
 function Heropage() {
+  const { scrollYProgress } = useScroll();
+
+  const yScale = scrollYProgress;
   return (
     <>
       <div className="stickey">
@@ -17,7 +21,7 @@ function Heropage() {
         </svg>
       </div>
       <motion.div
-        className="  h-screen bg-indigo-700 flex justify-center relative rounded-full "
+        className="  h-screen bg-indigo-700 flex justify-center relative  "
         animate={{
           scale: [1, 2, 2, 1, 1],
           rotate: [0, 0, 360, 360, 0],
