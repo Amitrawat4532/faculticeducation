@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, useScroll } from "framer-motion";
-import { Parallax, ParallaxLayer } from "@react-spring/Parallax";
+
 function Heropage() {
   const { scrollYProgress } = useScroll();
 
