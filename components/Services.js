@@ -25,10 +25,7 @@ function Services() {
   ];
   return (
     <>
-      <div
-        className="h-full w-full sm:min-h-screen  "
-        style={{ backgroundColor: "#F5F7FA" }}
-      >
+      <div className="h-full w-full" style={{ backgroundColor: "#F5F7FA" }}>
         {/* 1st box */}
         <div className="h-full  w-full  flex flex-col sm:flex-row ">
           {/* left box */}

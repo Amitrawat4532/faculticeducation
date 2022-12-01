@@ -8,14 +8,17 @@ import Thirdpage from "../components/Thirdpage";
 export default function Home() {
   return (
     <>
-      <div style={{ overflow: "visible", height: "500vh" }}>
+      <div style={{ overflow: "visible", height: "250vh" }}>
         <Heropage />
         <Motion />
-        {/* <Scrollpage /> */}
-        {/* <Skills />
-        <Thirdpage />
-        <Services /> */}
       </div>
+
+      {/* <div>
+        <Scrollpage />
+        <Skills />
+        <Thirdpage />
+        <Services />
+      </div> */}
     </>
   );
 }

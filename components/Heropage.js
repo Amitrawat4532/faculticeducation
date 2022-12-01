@@ -21,7 +21,7 @@ function Heropage() {
         </svg>
       </div>
       <motion.div
-        className="  h-screen bg-indigo-700 flex justify-center relative  "
+        className="  h-screen bg-indigo-700 flex justify-center relative"
         animate={{
           scale: [1, 2, 2, 1, 1],
           rotate: [0, 0, 360, 360, 0],
@@ -34,7 +34,7 @@ function Heropage() {
 
           repeatDelay: 1,
         }}
-        initial={{ opacity: "10" }}
+        initial={{ opacity: "1" }}
       >
         <motion.div className=" items-center h-96 absolute top-20 w-11/12  flex justify-center flex-col gap-5">
           <h2 className="text-white text-1xl sm:text-2xl lg:text-2xl">
