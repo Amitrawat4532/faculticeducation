@@ -1,6 +1,17 @@
 import React from "react";
+// import { useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 
-function Cards() {
+function Cards({ scrollY }) {
+  const { scrollY, scrollYProgress } = useScroll();
+
+  if (typeof window !== "undefined") {
+    // browser code
+    window.addEventListener("scroll", () => {
+      console.log(scrollY);
+    });
+  }
+
   const Cards = [
     {
       img: ["../images/card1.webp"],
@@ -23,27 +34,45 @@ function Cards() {
   ];
   return (
     <>
-      <div className="w-full h-[170vh] bg-slate-200  flex flex-row justify-center items-end overflow-hidden ">
+      <motion.div className="w-full h-[170vh] bg-slate-200  flex flex-row justify-center items-end overflow-hidden">
         {Cards.map((el, id) => {
           return (
             <>
               <div
                 className="flex flex-row justify-center items-center flex-wrap py-20"
                 key={id}
-                // style={{
-                //   paddingTop: id % 2 === 0 ? "80px" : "0",
-                // }}
+                style={
+                  {
+                    // paddingTop: id % 2 === 0 ? "80px" : "0",
+                  }
+                }
               >
-                <div className="h-[110vh] w-60 flex flex-col justify-center items-center ">
+                <motion.div className="h-[110vh] w-[250px] flex flex-col justify-center items-center">
                   {el?.img.map((x, key) => (
-                    <img key={key} src={x} className="h-[400px] w-full " />
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 10,
+                      }}
+                    >
+                      <img
+                        key={key}
+                        src={x}
+                        className="h-[500px] w-[250px] relative"
+                        style={{
+                          top: id % 2 === 0 ? `5+${scrollY}%` : 0,
+                        }}
+                      />
+                    </motion.div>
                   ))}
-                </div>
+                </motion.div>
               </div>
             </>
           );
         })}
-      </div>
+      </motion.div>
     </>
   );
 }
