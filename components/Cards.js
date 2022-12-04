@@ -49,6 +49,7 @@ function Cards({ scrollY }) {
                         stiffness: 400,
                         damping: 10,
                       }}
+                      key={key}
                     >
                       <img
                         key={key}
