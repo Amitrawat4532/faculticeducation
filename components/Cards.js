@@ -54,12 +54,12 @@ function Cards({ scrollY }) {
                         key={key}
                         src={x}
                         className="h-[500px] w-[250px]"
-                        style={{
-                          transform:
-                            id % 2 === 0
-                              ? `translateY(${scrollY})`
-                              : `translateY(${-scrollY})`,
-                        }}
+                        // style={{
+                        //   transform:
+                        //     id % 2 === 0
+                        //       ? `translateY(${scrollY})`
+                        //       : `translateY(${-scrollY})`,
+                        // }}
                       />
                     </motion.div>
                   ))}
