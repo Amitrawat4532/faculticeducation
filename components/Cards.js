@@ -3,14 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 function Cards({ scrollY }) {
-  const { scrollY, scrollYProgress } = useScroll();
-
-  if (typeof window !== "undefined") {
-    // browser code
-    window.addEventListener("scroll", () => {
-      console.log(scrollY);
-    });
-  }
+  // const { scrollY, scrollYProgress } = useScroll();
 
   const Cards = [
     {
@@ -60,9 +53,12 @@ function Cards({ scrollY }) {
                       <img
                         key={key}
                         src={x}
-                        className="h-[500px] w-[250px] relative"
+                        className="h-[500px] w-[250px]"
                         style={{
-                          top: id % 2 === 0 ? `5+${scrollY}%` : 0,
+                          transform:
+                            id % 2 === 0
+                              ? `translateY(${scrollY})`
+                              : `translateY(${-scrollY})`,
                         }}
                       />
                     </motion.div>

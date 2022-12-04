@@ -13,6 +13,7 @@ export default function Motion() {
     window.addEventListener("scroll", () => {
       if (scrollYProgress.current >= 0.95) {
         setScrollDOne(true);
+        // console.log(window.pageYOffset, scrollY.current);
       } else {
         setScrollDOne(false);
       }
@@ -23,7 +24,7 @@ export default function Motion() {
     <>
       <div className="h-full w-full flex justify-center items-center bg-transparent  z-10 overflowX-hidden">
         <motion.div
-          className=" border-1  border-black rounded-full bg-white flex-col  flex justify-center items-center fixed z-10 overflow-hidden"
+          className=" border-1  border-black rounded-full bg-white flex-col  flex justify-center items-center fixed z-10 overflow-hidden "
           style={{
             // scaleX: scrollYProgress,
             width: scrollY,
@@ -32,7 +33,6 @@ export default function Motion() {
             maxWidth: "110vw",
             opacity: scrollYProgress,
           }}
-          // animate={{ opacity: 1 }}
           id="motion_container"
         >
           <div
@@ -41,7 +41,7 @@ export default function Motion() {
               overflowY: scrollDone ? "scroll" : "hidden",
             }}
           >
-            <Cards />
+            <Cards scrollY={scrollYProgress.current} />
             <Thirdpage />
           </div>
         </motion.div>
