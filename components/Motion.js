@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { motion, useScroll } from "framer-motion";
 import Cards from "./Cards";
 import Thirdpage from "./Thirdpage";
-import Services from "./Services";
 
 export default function Motion() {
   const { scrollY, scrollYProgress } = useScroll();
@@ -24,7 +23,7 @@ export default function Motion() {
     <>
       <div className="h-full w-full flex justify-center items-center bg-transparent  z-10 overflowX-hidden">
         <motion.div
-          className=" border-1  border-black rounded-full bg-white flex-col  flex justify-center items-center fixed z-10 overflow-hidden "
+          className=" border-1  border-black rounded-full bg-white flex-col  flex  fixed z-10 overflow-hidden "
           style={{
             // scaleX: scrollYProgress,
             width: scrollY,

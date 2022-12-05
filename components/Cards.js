@@ -9,12 +9,12 @@ function Cards({ scrollY }) {
       y: 0,
     },
     onscreen: {
-      y: 45,
+      y: -50,
 
       transition: {
         // type: "spring",
-        bounce: 0.4,
-        duration: 4,
+        // bounce: 0.4,
+        duration: 0.5,
       },
     },
   };
@@ -45,40 +45,26 @@ function Cards({ scrollY }) {
         {Cards.map((el, id) => {
           return (
             <>
-              <div
-                className="flex flex-row justify-center items-center flex-wrap py-20"
-                key={id}
-                style={
-                  {
-                    // paddingTop: id % 2 === 0 ? "80px" : "0", hlo my name
-                  }
-                }
-              >
+              <div className="flex  flex-wrap py-20" key={id}>
                 <motion.div className="h-[110vh] w-[250px] flex flex-col justify-center items-center">
                   {el?.img.map((x, key) => (
                     <motion.div
-                      // whileHover={{ scale: 1.1 }}
-                      // transition={{
-                      //   type: "spring",
-                      //   stiffness: 400,
-                      //   damping: 10,
-                      // }}
+                      whileHover={{ scale: 1.1 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 20,
+                      }}
                       key={key}
                       initial="offscreen"
                       whileInView="onscreen"
-                      viewport={{ once: false, amount: 0.8 }}
+                      viewport={{ once: false, amount: "all" }}
                       variants={cardVariants}
                     >
-                      <img
+                      <motion.img
                         key={key}
                         src={x}
                         className="h-[500px] w-[250px]"
-                        // style={{
-                        //   transform:
-                        //     id % 2 === 0
-                        //       ? `translateY(${scrollY})`
-                        //       : `translateY(${-scrollY})`,
-                        // }}
                       />
                     </motion.div>
                   ))}
