@@ -50,7 +50,7 @@ function Cards({ scrollY }) {
                 key={id}
                 style={
                   {
-                    // paddingTop: id % 2 === 0 ? "80px" : "0",
+                    // paddingTop: id % 2 === 0 ? "80px" : "0", hlo my name
                   }
                 }
               >
