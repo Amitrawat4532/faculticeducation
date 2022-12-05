@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { motion, useScroll } from "framer-motion";
 
@@ -22,19 +23,19 @@ function Heropage() {
       </div>
       <motion.div
         className="  h-screen bg-indigo-700 flex justify-center relative"
-        animate={{
-          scale: [1, 2, 2, 1, 1],
-          rotate: [0, 0, 360, 360, 0],
-          borderRadius: ["0%", "0%", "50%", "50%", "0%"],
-        }}
-        transition={{
-          duration: 2,
-          ease: "easeInOut",
-          times: [0, 0.2, 0.5, 0.8, 1],
+        // animate={{
+        //   scale: [1, 2, 2, 1, 1],
+        //   rotate: [0, 0, 360, 360, 0],
+        //   borderRadius: ["0%", "0%", "50%", "50%", "0%"],
+        // }}
+        // transition={{
+        //   duration: 2,
+        //   ease: "easeInOut",
+        //   times: [0, 0.2, 0.5, 0.8, 1],
 
-          repeatDelay: 1,
-        }}
-        initial={{ opacity: "1" }}
+        //   repeatDelay: 1,
+        // }}
+        // initial={{ opacity: "1" }}
       >
         <motion.div className=" items-center h-96 absolute top-20 w-11/12  flex justify-center flex-col gap-5">
           <h2 className="text-white text-1xl sm:text-2xl lg:text-2xl">
@@ -66,17 +67,17 @@ function Heropage() {
           </div>
         </motion.div>
         <div className="absolute bottom-10 left-16 rotate-90 hidden  lg:block">
-          <img src="https://facultic.ancorathemes.com/wp-content/uploads/2022/03/shape-05.svg"></img>
+          <img src="https://facultic.ancorathemes.com/wp-content/uploads/2022/03/shape-05.svg" alt=""/>
         </div>
         <div className="absolute top-8 right-10 hidden lg:block">
-          <img src="https://facultic.ancorathemes.com/wp-content/uploads/2022/03/shape-06.svg"></img>
+          <img src="https://facultic.ancorathemes.com/wp-content/uploads/2022/03/shape-06.svg" alt=""/>
         </div>
         <div className="absolute top-8 left-10 hidden lg:block">
-          <img src="https://facultic.ancorathemes.com/wp-content/uploads/2022/03/shape-02.svg"></img>
+          <img src="https://facultic.ancorathemes.com/wp-content/uploads/2022/03/shape-02.svg" alt=""/>
         </div>
 
         <div className="absolute bottom-12 right-6 hidden lg:block">
-          <img src="https://facultic.ancorathemes.com/wp-content/uploads/2022/03/shape-04.svg"></img>
+          <img src="https://facultic.ancorathemes.com/wp-content/uploads/2022/03/shape-04.svg" alt=""/>
         </div>
       </motion.div>
       <div>

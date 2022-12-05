@@ -1,6 +1,7 @@
-import React from "react";
+/* eslint-disable @next/next/no-img-element */
+import React, {useEffect} from "react";
 // import { useScroll } from "framer-motion";
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 
 function Cards({ scrollY }) {
   // const { scrollY, scrollYProgress } = useScroll();
@@ -34,26 +35,23 @@ function Cards({ scrollY }) {
               <div
                 className="flex flex-row justify-center items-center flex-wrap py-20"
                 key={id}
-                style={
-                  {
-                    // paddingTop: id % 2 === 0 ? "80px" : "0",
-                  }
-                }
               >
                 <motion.div className="h-[110vh] w-[250px] flex flex-col justify-center items-center">
                   {el?.img.map((x, key) => (
                     <motion.div
-                      whileHover={{ scale: 1.1 }}
+                      initial={{y:0, x:0}}
+                      animate={{y:-200}}
+                      whileInView={() => console.log("true")}
                       transition={{
-                        type: "spring",
-                        stiffness: 400,
-                        damping: 10,
+                        type: "",
+                    
                       }}
                       key={key}
                     >
                       <img
                         key={key}
                         src={x}
+                        alt=""
                         className="h-[500px] w-[250px]"
                         // style={{
                         //   transform:
