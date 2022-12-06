@@ -23,7 +23,7 @@ function Thirdpage() {
   ];
   return (
     <>
-      <div className="h-full  w-full flex   px-7 py-7 sm:px-20  z-30  ">
+      <div className="h-[100vh] border-1  border-black   w-full flex   px-7 py-7 sm:px-20  z-30  ">
         <div className="flex  w-full h-full items-start   flex-col sm:flex-row py-9">
           {/* section left  */}
           <div className=" h-full w-full  sm:w-2/4  px-4 sm:px-8 gap-8 sm:gap-5 md:gap-10 flex flex-col justify-center ">

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { motion, useScroll } from "framer-motion";
-// import Cards from "./Cards";
+import Cards from "./Cards";
 import Thirdpage from "./Thirdpage";
 import CardsMain from "./CardsMain";
+import Skills from "./Skills";
+import Scrollpage from "./Scrollpage";
 
 export default function Motion() {
   const { scrollY, scrollYProgress } = useScroll();
@@ -29,21 +31,27 @@ export default function Motion() {
             // scaleX: scrollYProgress,
             width: scrollY,
             height: scrollY,
-            maxHeight: "200vh",
-            maxWidth: "110vw",
-            opacity: scrollYProgress,
+            // maxHeight: "400vh",
+            maxWidth: "115vw",
+            opacity: scrollY,
           }}
           id="motion_container"
         >
           <div
             style={{
-              paddingTop: "100px",
+              // paddingTop: "100px",
+              maxWidth: "120vw",
+              // height: "100%",
+              // padding: "0 50px",
               overflowY: scrollDone ? "scroll" : "hidden",
             }}
           >
-            {/* <Cards  scrollY={scrollYProgress.current}/> */}
-            <CardsMain />
-            <Thirdpage />
+            <Cards scrollY={scrollYProgress.current} />
+            {/* <CardsMain /> */}
+            {/* <Thirdpage /> */}
+            {/* <Skills /> */}
+
+            {/* <Scrollpage /> */}
           </div>
         </motion.div>
       </div>

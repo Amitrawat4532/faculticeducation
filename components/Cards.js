@@ -1,15 +1,14 @@
 import React from "react";
-// import { useScroll } from "framer-motion";
+
 import { motion } from "framer-motion";
 
 function Cards() {
-  // const { scrollY, scrollYProgress } = useScroll();
   const cardVariants = {
     offscreen: {
       y: 0,
     },
     onscreen: {
-      y: -50,
+      y: 50,
 
       transition: {
         type: "spring",
@@ -41,7 +40,7 @@ function Cards() {
   ];
   return (
     <>
-      <motion.div className="w-full h-[170vh] bg-slate-200  flex flex-row justify-center items-end overflow-hidden">
+      <motion.div className="w-full h-[170vh] bg-white mt-60 flex flex-row justify-center items-end overflow-hidden">
         {Cards.map((el, id) => {
           return (
             <>
@@ -49,12 +48,6 @@ function Cards() {
                 <motion.div className="h-[110vh] w-[250px] flex flex-col justify-center items-center">
                   {el?.img.map((x, key) => (
                     <motion.div
-                      // whileHover={{ scale: 1.1 }}
-                      // transition={{
-                      //   type: "spring",
-                      //   stiffness: 400,
-                      //   damping: 20,
-                      // }}
                       key={key}
                       initial="offscreen"
                       whileInView="onscreen"
