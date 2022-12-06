@@ -1,8 +1,8 @@
 import React from "react";
 // import { useScroll } from "framer-motion";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
-function Cards({ scrollY }) {
+function Cards() {
   // const { scrollY, scrollYProgress } = useScroll();
   const cardVariants = {
     offscreen: {
@@ -12,7 +12,7 @@ function Cards({ scrollY }) {
       y: -50,
 
       transition: {
-        // type: "spring",
+        type: "spring",
         // bounce: 0.4,
         duration: 1,
       },

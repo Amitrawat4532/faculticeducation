@@ -1,9 +1,9 @@
 import Heropage from "../components/Heropage";
 import Motion from "../components/Motion";
-import Scrollpage from "../components/Scrollpage";
-import Services from "../components/Services";
-import Skills from "../components/Skills";
-import Thirdpage from "../components/Thirdpage";
+// import Scrollpage from "../components/Scrollpage";
+// import Services from "../components/Services";
+// import Skills from "../components/Skills";
+// import Thirdpage from "../components/Thirdpage";
 
 export default function Home() {
   return (
@@ -12,13 +12,6 @@ export default function Home() {
         <Heropage />
         <Motion />
       </div>
-
-      {/* <div>
-        <Scrollpage />
-        <Skills />
-        <Thirdpage />
-        <Services />
-      </div> */}
     </>
   );
 }

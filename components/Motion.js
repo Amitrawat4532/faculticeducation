@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { motion, useScroll } from "framer-motion";
-import Cards from "./Cards";
+// import Cards from "./Cards";
 import Thirdpage from "./Thirdpage";
+import CardsMain from "./CardsMain";
 
 export default function Motion() {
   const { scrollY, scrollYProgress } = useScroll();
@@ -40,7 +41,8 @@ export default function Motion() {
               overflowY: scrollDone ? "scroll" : "hidden",
             }}
           >
-            <Cards scrollY={scrollYProgress.current} />
+            {/* <Cards  scrollY={scrollYProgress.current}/> */}
+            <CardsMain />
             <Thirdpage />
           </div>
         </motion.div>
