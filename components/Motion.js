@@ -24,9 +24,9 @@ export default function Motion() {
 
   return (
     <>
-      <div className="h-full w-full flex justify-center items-center bg-transparent  z-10 overflowX-hidden">
+      <div className="h-full w-full flex justify-center items-center bg-transparent fixed  z-10 overflowX-hidden">
         <motion.div
-          className=" border-1  border-black rounded-full bg-white flex-col  flex  fixed z-10 overflow-hidden "
+          className=" border-1  border-black rounded-full bg-white flex-col  flex  z-10 overflow-hidden "
           style={{
             // scaleX: scrollYProgress,
             width: scrollY,
