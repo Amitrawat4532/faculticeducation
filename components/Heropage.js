@@ -44,7 +44,7 @@ function Heropage() {
             Distant learning is <br /> the future of education
           </h1>
 
-          <div className="border-2   flex bg-white rounded-full">
+          <div className="  flex bg-white rounded-full">
             <input
               type="search"
               placeholder="Enter your Email Address"

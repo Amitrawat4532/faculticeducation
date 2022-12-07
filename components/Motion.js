@@ -1,21 +1,19 @@
 import React, { useState } from "react";
 import { motion, useScroll } from "framer-motion";
-import Cards from "./Cards";
-import Thirdpage from "./Thirdpage";
 import CardsMain from "./CardsMain";
-import Skills from "./Skills";
-import Scrollpage from "./Scrollpage";
 
 export default function Motion() {
   const { scrollY, scrollYProgress } = useScroll();
   const [scrollDone, setScrollDOne] = useState(false);
+  const [scrollVal, setScrollVal] = useState(0);
 
   if (typeof window !== "undefined") {
     // browser code
     window.addEventListener("scroll", () => {
-      if (scrollYProgress.current >= 0.95) {
+      setScrollVal(window.pageYOffset / 5);
+      console.log(scrollY.current);
+      if (scrollY.current >= 410) {
         setScrollDOne(true);
-        // console.log(window.pageYOffset, scrollY.current);
       } else {
         setScrollDOne(false);
       }
@@ -24,34 +22,26 @@ export default function Motion() {
 
   return (
     <>
-      <div className="h-full w-full flex justify-center items-center bg-transparent fixed  z-10 overflowX-hidden">
+      <div className="h-full w-full flex justify-center items-center bg-transparent fixed  z-10 overflowX-hidden ">
         <motion.div
-          className=" border-1  border-black rounded-full bg-white flex-col  flex  z-10 overflow-hidden "
+          className="  bg-white flex-col  flex  z-10 overflow-hidden "
           style={{
-            // scaleX: scrollYProgress,
-            width: scrollY,
-            height: scrollY,
-            // maxHeight: "400vh",
+            width: "100vw",
+            height: "100vh",
             maxWidth: "115vw",
-            opacity: scrollY,
+            opacity: 1,
+            clipPath: `circle(${scrollY.current / 5}% at 50% 50%)`,
           }}
           id="motion_container"
         >
           <div
             style={{
-              // paddingTop: "100px",
               maxWidth: "120vw",
-              // height: "100%",
-              // padding: "0 50px",
               overflowY: scrollDone ? "scroll" : "hidden",
             }}
           >
-            <Cards scrollY={scrollYProgress.current} />
-            {/* <CardsMain /> */}
-            {/* <Thirdpage /> */}
-            {/* <Skills /> */}
-
-            {/* <Scrollpage /> */}
+            {/* <Cards /> */}
+            <CardsMain />
           </div>
         </motion.div>
       </div>

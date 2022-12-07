@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <div
-        style={{ overflow: "visible", height: "500vh", position: "relative" }}
+        style={{ overflow: "visible", height: "200vh", position: "relative" }}
       >
         <Heropage />
         <Motion />

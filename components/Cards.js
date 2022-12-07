@@ -8,44 +8,44 @@ function Cards() {
       y: 0,
     },
     onscreen: {
-      y: 50,
+      y: 20,
 
       transition: {
-        type: "spring",
+        // type: "spring",
         // bounce: 0.4,
-        duration: 1,
+        duration: 2,
       },
     },
   };
 
   const Cards = [
-    {
-      img: ["../images/card1.webp"],
-    },
+    // {
+    //   img: ["../images/card1.webp"],
+    // },
     {
       img: ["../images/card2.webp", "../images/card1.webp"],
     },
     {
       img: ["../images/card3.webp"],
     },
-    {
-      img: ["../images/card4.webp"],
-    },
+    // {
+    //   img: ["../images/card4.webp"],
+    // },
     {
       img: ["../images/card5.webp", "../images/card5.webp"],
     },
-    {
-      img: ["../images/card6.webp"],
-    },
+    // {
+    //   img: ["../images/card6.webp"],
+    // },
   ];
   return (
     <>
-      <motion.div className="w-full h-[170vh] bg-white mt-60 flex flex-row justify-center items-end overflow-hidden">
+      <motion.div className="w-full h-[100vh] bg-white  flex flex-row justify-center items-center overflow-hidden border-9 border-black  ">
         {Cards.map((el, id) => {
           return (
             <>
-              <div className="flex  flex-wrap py-20" key={id}>
-                <motion.div className="h-[110vh] w-[250px] flex flex-col justify-center items-center">
+              <div className="flex  flex-wrap " key={id}>
+                <motion.div className="h-[130vh] w-[250px] flex flex-col justify-center items-start">
                   {el?.img.map((x, key) => (
                     <motion.div
                       key={key}
@@ -55,8 +55,19 @@ function Cards() {
                       variants={cardVariants}
                     >
                       <motion.img
-                        key={key}
-                        src={x}
+                        src="../images/card2.webp"
+                        className="h-[500px] w-[250px]"
+                      />
+                      <motion.img
+                        src="../images/card2.webp"
+                        className="h-[500px] w-[250px]"
+                      />
+                      <motion.img
+                        src="../images/card2.webp"
+                        className="h-[500px] w-[250px]"
+                      />
+                      <motion.img
+                        src="../images/card2.webp"
                         className="h-[500px] w-[250px]"
                       />
                     </motion.div>
