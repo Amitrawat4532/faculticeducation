@@ -4,9 +4,6 @@ import Scrollpage from "../components/Scrollpage";
 import Skills from "../components/Skills";
 import Services from "../components/Services";
 
-// import Skills from "../components/Skills";
-// import Thirdpage from "../components/Thirdpage";
-
 export default function Home() {
   return (
     <>
