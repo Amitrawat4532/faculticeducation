@@ -2,7 +2,7 @@ import React from "react";
 
 function Scrollpage() {
   return (
-    <div className="h-screen mt-[20rem] w-full bg-slate-800 flex justify-center items-center z-50">
+    <div className="h-screen w-full bg-slate-800 flex justify-center items-center z-50">
       <div className="h-96 w-96 bg-slate-300 flex justify-center items-center flex-col">
         <h1>hey this is dummy text1</h1>
         <h2>hey this is dummy text2</h2>

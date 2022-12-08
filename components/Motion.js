@@ -20,18 +20,28 @@ export default function Motion() {
   }
 
   return (
-    <motion.div
-      className="  bg-white flex-col  flex  z-10 overflow-hidden fixed"
-      style={{
-        width: "100vw",
-        height: "100vh",
-        maxWidth: "115vw",
-        opacity: 1,
-        clipPath: `circle(${scrollY.current / 5}% at 50% 50%)`,
-      }}>
-      <div>
-        <CardsMain />
-      </div>
-    </motion.div>
+    <>
+      <motion.div
+        className="  flex-col  flex  fixed"
+        style={{
+          background: "#625e5e82",
+          width: "100vw",
+          height: "100vh",
+          maxWidth: "115vw",
+          opacity: 1,
+          clipPath: `circle(${scrollY.current / 5}% at 50% 50%)`,
+          zIndex: "10",
+        }}
+      >
+        <motion.div
+          style={{
+            // zIndex: "40",
+            transform: `translateY(${-scrollY.current / 2}px)`,
+          }}
+        >
+          <CardsMain />
+        </motion.div>
+      </motion.div>
+    </>
   );
 }

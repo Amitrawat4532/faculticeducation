@@ -8,7 +8,13 @@ export default function Home() {
   return (
     <>
       <div
-        style={{ overflow: "visible", height: "200vh", position: "relative" }}
+        style={{
+          overflow: "visible",
+          height: "260vh",
+          width: "100vw",
+          position: "relative",
+          zIndex: "50",
+        }}
       >
         <Heropage />
         <Motion />
