@@ -1,10 +1,7 @@
 import { motion, useScroll } from 'framer-motion'
 
 const Circle = () => {
-    const { scrollY, scrollYProgress } = useScroll()
-
-    console.log(scrollY)
-    console.log(scrollYProgress)
+    const { scrollY } = useScroll()
 
   return (
     <div className=' z-10 fixed inset-0 mx-auto overflow-hidden'>

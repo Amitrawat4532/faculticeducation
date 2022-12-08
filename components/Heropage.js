@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { motion, useScroll } from "framer-motion";
 
@@ -50,7 +51,7 @@ function Heropage() {
               placeholder="Enter your Email Address"
               className="h-10 w-60 rounded-3xl px-6  sm:w-90"
             ></input>
-            <img src="../images/sent.png" className="rounded-3xl w-10 " />
+            <img src="../images/sent.png" className="rounded-3xl w-10 " alt="image"/>
           </div>
           <div className="flex justify-center gap-4">
             <input
@@ -66,17 +67,17 @@ function Heropage() {
           </div>
         </motion.div>
         <div className="absolute bottom-10 left-16 rotate-90 hidden  lg:block">
-          <img src="https://facultic.ancorathemes.com/wp-content/uploads/2022/03/shape-05.svg"></img>
+          <img src="https://facultic.ancorathemes.com/wp-content/uploads/2022/03/shape-05.svg" alt="image" />
         </div>
         <div className="absolute top-8 right-10 hidden lg:block">
-          <img src="https://facultic.ancorathemes.com/wp-content/uploads/2022/03/shape-06.svg"></img>
+          <img src="https://facultic.ancorathemes.com/wp-content/uploads/2022/03/shape-06.svg" alt="image" />
         </div>
         <div className="absolute top-8 left-10 hidden lg:block">
-          <img src="https://facultic.ancorathemes.com/wp-content/uploads/2022/03/shape-02.svg"></img>
+          <img src="https://facultic.ancorathemes.com/wp-content/uploads/2022/03/shape-02.svg" alt="image" />
         </div>
 
         <div className="absolute bottom-12 right-6 hidden lg:block">
-          <img src="https://facultic.ancorathemes.com/wp-content/uploads/2022/03/shape-04.svg"></img>
+          <img src="https://facultic.ancorathemes.com/wp-content/uploads/2022/03/shape-04.svg" alt="image" />
         </div>
       </motion.div>
       {/* <div>

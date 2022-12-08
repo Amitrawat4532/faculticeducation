@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable @next/next/no-img-element */
 
 function Skills() {
   const Data = [
@@ -52,25 +52,6 @@ function Skills() {
     },
   ];
 
-  // const [apiData, setApiData] = useState();
-
-  // const getApiData = async () => {
-  //   try {
-  //     const res = await fetch("https://jsonplaceholder.typicode.com/users");
-  //     const data = await res.json();
-
-  //     setApiData(data);
-  //   } catch (error) {
-  //     console.log("api fetching error");
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   getApiData();
-  // });
-
-  // getApiData();
-
   return (
     <>
       {/* bg-neutral-200 */}
@@ -96,6 +77,7 @@ function Skills() {
                   id="zoom"
                   src={el.img}
                   className="h-80 w-full   transition duration-500 hover:scale-124"
+                  alt="image"
                 />
                 <div className=" h-32 w-1/1  flex justify-center items-center flex-col gap-3 relative bg-white ">
                   <div
@@ -116,21 +98,20 @@ function Skills() {
                     {el.heading}
                   </a>
                 </div>
-                <hr className="bg-slate-500 w-60 bg-center self-center"></hr>
+                <hr className="bg-slate-500 w-60 bg-center self-center" />
                 <div className="h-20 w-1/1  flex justify-between items-center    bg-white ">
                   <div className="flex-row flex gap-4 px-4 sm:px-7">
-                    <img src="../images/lesson.png" className="h-6 w-6"></img>
+                    <img src="../images/lesson.png" className="h-6 w-6" alt="image" />
                     <h5 className="font-bold"> {el.lesson}</h5>
                   </div>
                   <div className="flex-row flex gap-3 px-6 ">
-                    <img src="../images/user.png" className="h-6 w-6"></img>
+                    <img src="../images/user.png" className="h-6 w-6" alt="image" />
                     <h5 className="font-bold">{el.person}</h5>
                   </div>
                 </div>
               </div>
             );
           })}
-          {/* <div className="h-28 w-full bg-white"></div> */}
         </div>
       </div>
     </>
