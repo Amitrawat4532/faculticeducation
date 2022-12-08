@@ -3,34 +3,35 @@
 import { motion } from "framer-motion";
 
 const CardsMain = () => {
-  const cardVariants = {
-    // offscreen: {
-    //   y: 0,
-    // },
-    // onscreen: {
-    //   y: 40,
-    //   transition: {
-    //     // type: "spring",
-    //     // bounce: 0.4,
-    //     duration: 0.5,
-    //   },
-    // },
-  };
-  const cardVariantsDown = {
-    // offscreen: {
-    //   y: 0,
-    // },
-    // onscreen: {
-    //   y: -20,
-    //   transition: {
-    //     // type: "spring",
-    //     // bounce: 0.4,
-    //     duration: 0.5,
-    //   },
-    // },
-  };
+
+  const upVariant = {
+     offscreen: {
+      y: -80,
+    },
+    onscreen: {
+      y: 30,
+      transition: {
+        type: "ease-in",
+        duration: 5,
+      },
+    },
+  }
+
+  // const upVariantTwo = {
+  //    offscreen: {
+  //     y: 0,
+  //   },
+  //   onscreen: {
+  //     y: 40,
+  //     transition: {
+  //       type: "ease-in",
+  //       duration: 2,
+  //     },
+  //   },
+  // }
+
   return (
-    <div className="flex h-full w-[110vw] py-52  justify-center items-center bg-white relative left-[-4vw] overflow-hidden">
+    <div className="flex h-full scale-110 w-[110vw] py-52  justify-center items-center bg-white relative left-[-4vw] overflow-hidden">
       {/* Card Coantainer 1 */}
       <motion.div className="">
         <motion.img
@@ -41,9 +42,9 @@ const CardsMain = () => {
         />
       </motion.div>
       {/* Card Coantainer 2 */}
-      <div className="heyyy ">
-        <div className="h-two">
-          <motion.img className="two " src="../images/card5.webp" alt="image" />
+      <div className="heyyy">
+        <div className="h-two ">
+          <motion.img className="two " whileInView="onscreen" variants={upVariant}  viewport={{ once: false,  amount: "some" }}  src="../images/card5.webp" alt="image" />
         </div>
 
         <div className="h-three">
@@ -59,10 +60,8 @@ const CardsMain = () => {
           className="two "
           src="../images/card1.webp"
           alt="image"
-          whileInView="onscreen"
-          viewport={{ once: false, amount: "all" }}
-          variants={cardVariantsDown}
         />
+
       </div>
       {/* Card Coantainer 4 */}
       <div className="h-five ">
@@ -70,10 +69,6 @@ const CardsMain = () => {
           className="two "
           src="../images/card9.webp"
           alt="image"
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: false, amount: "all" }}
-          variants={cardVariants}
         />
       </div>
       {/* Card Coantainer 5 */}
@@ -83,10 +78,6 @@ const CardsMain = () => {
             className="two "
             src="../images/card7.webp"
             alt="image"
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: false, amount: "all" }}
-            variants={cardVariantsDown}
           />
         </div>
 
