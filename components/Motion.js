@@ -5,6 +5,7 @@ import CardsMain from "./CardsMain";
 export default function Motion() {
   const { scrollY } = useScroll();
   const [scrollDone, setScrollDOne] = useState(false);
+  const [scrollVal, setScrollVal] = useState(0);
 
   if (typeof window !== "undefined") {
     // browser code
