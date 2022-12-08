@@ -4,18 +4,17 @@ import { motion } from "framer-motion";
 
 function Cards() {
   const cardVariants = {
-    offscreen: {
-      y: 0,
-    },
-    onscreen: {
-      y: 20,
-
-      transition: {
-        // type: "spring",
-        // bounce: 0.4,
-        duration: 2,
-      },
-    },
+    // offscreen: {
+    //   y: 0,
+    // },
+    // onscreen: {
+    //   y: 50,
+    //   transition: {
+    //     type: "spring",
+    //     // bounce: 0.4,
+    //     duration: 1,
+    //   },
+    // },
   };
 
   const Cards = [
