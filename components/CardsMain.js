@@ -9,7 +9,7 @@ const CardsMain = () => {
       y: -80,
     },
     onscreen: {
-      y: 30,
+      y: 10,
       transition: {
         type: "ease-in",
         duration: 5,
@@ -31,7 +31,7 @@ const CardsMain = () => {
   // }
 
   return (
-    <div className="flex h-full scale-110 w-[110vw] py-52  justify-center items-center bg-white relative left-[-4vw] overflow-hidden">
+    <div className="flex h-full w-[110vw] py-52  justify-center items-center bg-white relative left-[-4vw] overflow-hidden">
       {/* Card Coantainer 1 */}
       <motion.div className="">
         <motion.img
@@ -42,13 +42,13 @@ const CardsMain = () => {
         />
       </motion.div>
       {/* Card Coantainer 2 */}
-      <div className="heyyy">
+      <div className="heyyy flex flex-col gap-6">
         <div className="h-two ">
           <motion.img className="two " whileInView="onscreen" variants={upVariant}  viewport={{ once: false,  amount: "some" }}  src="../images/card5.webp" alt="image" />
         </div>
 
-        <div className="h-three">
-          <motion.img className="two " src="../images/card3.webp" alt="image" />
+        <div className="h-three mt-4">
+          <motion.img className="two mt-4" src="../images/card3.webp" alt="image" />
         </div>
       </div>
 
@@ -72,7 +72,7 @@ const CardsMain = () => {
         />
       </div>
       {/* Card Coantainer 5 */}
-      <div className="hey">
+      <div className="hey flex flex-col gap-10">
         <div className="h-six">
           <motion.img
             className="two "
