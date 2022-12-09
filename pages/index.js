@@ -10,7 +10,7 @@ export default function Home() {
       <div
         style={{
           overflow: "visible",
-          height: "260vh",
+          height: "240vh",
           width: "100vw",
           position: "relative",
           zIndex: "50",

@@ -22,7 +22,7 @@ function Heropage() {
         </svg>
       </div> */}
       <motion.div
-        className="  h-screen w-screen bg-indigo-700 flex justify-center fixed z-10"
+        className="  h-screen w-screen bg-indigo-700 flex justify-center fixed z-0"
         // animate={{
         //   scale: [1, 2, 2, 1, 1],
         //   rotate: [0, 0, 360, 360, 0],

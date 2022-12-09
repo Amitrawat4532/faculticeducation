@@ -3,106 +3,125 @@
 import { motion } from "framer-motion";
 
 const CardsMain = () => {
-  const cardVariants = {
-    // offscreen: {
-    //   y: 0,
-    // },
-    // onscreen: {
-    //   y: 40,
-    //   transition: {
-    //     // type: "spring",
-    //     // bounce: 0.4,
-    //     duration: 0.5,
-    //   },
-    // },
-  };
-  const cardVariantsDown = {
-    // offscreen: {
-    //   y: 0,
-    // },
-    // onscreen: {
-    //   y: -20,
-    //   transition: {
-    //     // type: "spring",
-    //     // bounce: 0.4,
-    //     duration: 0.5,
-    //   },
-    // },
-  };
+  // const cardVariants = {
+  //   offscreen: {
+  //     y: 0,
+  //   },
+  //   onscreen: {
+  //     y: 60,
+  //     transition: {
+  //       // type: "spring",
+  //       // bounce: 0.4,
+  //       duration: 1,
+  //     },
+  //   },
+  // };
+  // const cardVariantsDown = {
+  //   offscreen: {
+  //     y: 0,
+  //   },
+  //   onscreen: {
+  //     y: 50,
+  //     transition: {
+  //       // type: "spring",
+  //       // bounce: 0.4,
+  //       duration: 4,
+  //     },
+  //   },
+  // };
   return (
-    <div className="flex h-full w-[110vw] py-52  justify-center items-center bg-white relative left-[-4vw] overflow-hidden">
+    <div className="flex h-full w-[110vw] pt-52  justify-center items-center bg-#ebeef4 relative left-[-4vw] overflow-hidden gap-6">
       {/* Card Coantainer 1 */}
-      <motion.div className="">
+      <motion.div>
         <motion.img
-          // animate={{ x: -10 }}
+          // animate={{ y: -500 }}
           className="two "
-          src="../images/card4.webp"
+          src="../images/card4.png"
           alt="image"
         />
       </motion.div>
       {/* Card Coantainer 2 */}
-      <div className="heyyy ">
-        <div className="h-two">
-          <motion.img className="two " src="../images/card5.webp" alt="image" />
+      <div className="heyyy  ">
+        <div className="h-two py-3">
+          <motion.img
+            className="two "
+            src="../images/card5.png"
+            alt="image"
+            // initial="offscreen"
+            // whileInView="onscreen"
+            // viewport={{ once: false, amount: "all" }}
+            // variants={cardVariants}
+          />
         </div>
 
-        <div className="h-three">
-          <motion.img className="two " src="../images/card3.webp" alt="image" />
+        <div className="h-three py-3">
+          <motion.img
+            className="two "
+            src="../images/card3.png"
+            alt="image"
+            // initial="offscreen"
+            // whileInView="onscreen"
+            // viewport={{ once: false, amount: "all" }}
+            // variants={cardVariants}
+          />
         </div>
       </div>
 
       {/* Card Coantainer 3 */}
       <div className="h-four ">
         <motion.img
-          initial={{ y: 0 }}
           animate={{ y: -50 }}
           className="two "
-          src="../images/card1.webp"
+          src="../images/card1.png"
           alt="image"
-          whileInView="onscreen"
-          viewport={{ once: false, amount: "all" }}
-          variants={cardVariantsDown}
+          // initial="offscreen"
+          // whileInView="onscreen"
+          // viewport={{ once: false, amount: "all" }}
+          // variants={cardVariants}
         />
       </div>
       {/* Card Coantainer 4 */}
       <div className="h-five ">
         <motion.img
           className="two "
-          src="../images/card9.webp"
+          src="../images/card9.png"
           alt="image"
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: false, amount: "all" }}
-          variants={cardVariants}
+          // initial="offscreen"
+          // whileInView="onscreen"
+          // viewport={{ once: false, amount: "all" }}
+          // variants={cardVariants}
         />
       </div>
       {/* Card Coantainer 5 */}
-      <div className="hey">
-        <div className="h-six">
+      <div className="hey translate-y-24">
+        <div className="h-six py-3">
           <motion.img
             className="two "
-            src="../images/card7.webp"
+            src="../images/card7.png"
             alt="image"
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: false, amount: "all" }}
-            variants={cardVariantsDown}
+            // initial="offscreen"
+            // whileInView="onscreen"
+            // viewport={{ once: false, amount: "all" }}
+            // variants={cardVariants}
           />
         </div>
 
-        <div className="h-six">
-          <motion.img className="two " src="../images/card9.webp" alt="image" />
+        <div className="h-six py-3">
+          <motion.img className="two " src="../images/card10.png" alt="image" />
         </div>
       </div>
 
       {/* Card Coantainer 6 */}
       <div className="h-seven ">
         <motion.img
-          initial={{ y: 0 }}
           animate={{ y: -40 }}
           className="two "
-          src="../images/card6.webp"
+          src="../images/card10.png"
           alt="image"
+          // initial="offscreen"
+          // whileInView="onscreen"
+          // viewport={{ once: false, amount: "all" }}
+          // variants={cardVariants}
         />
       </div>
       {/* Card Coantainer 7 */}
@@ -110,8 +129,12 @@ const CardsMain = () => {
         <motion.img
           animate={{ y: -120 }}
           className="two "
-          src="../images/card8.webp"
+          src="../images/card8.png"
           alt="image"
+          // initial="offscreen"
+          // whileInView="onscreen"
+          // viewport={{ once: false, amount: "all" }}
+          // variants={cardVariants}
         />
       </div>
     </div>

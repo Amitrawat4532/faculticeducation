@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, useScroll } from "framer-motion";
+
 import CardsMain from "./CardsMain";
 
 export default function Motion() {
@@ -24,7 +25,7 @@ export default function Motion() {
       <motion.div
         className="  flex-col  flex  fixed"
         style={{
-          background: "#625e5e82",
+          background: "white",
           width: "100vw",
           height: "100vh",
           maxWidth: "115vw",
