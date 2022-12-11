@@ -10,7 +10,8 @@ export default function Home() {
       <div
         style={{
           overflow: "visible",
-          height: "240vh",
+          height: "100%",
+          minHeight: "150vh",
           width: "100vw",
           position: "relative",
           zIndex: "50",
@@ -19,7 +20,7 @@ export default function Home() {
         <Heropage />
         <Motion />
       </div>
-      <div
+      {/* <div
         style={{
           position: "relative",
           zIndex: "100",
@@ -28,7 +29,7 @@ export default function Home() {
         <Scrollpage />
         <Skills />
         <Services />
-      </div>
+      </div> */}
     </>
   );
 }

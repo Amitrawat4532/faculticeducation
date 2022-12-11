@@ -55,7 +55,7 @@ function Skills() {
   return (
     <>
       {/* bg-neutral-200 */}
-      <div className="h-full w-full flex justify-center  items-center   flex-col gap-8 bg-white z-50">
+      <div className="h-[130vh] w-full flex justify-center  items-center pb-10  flex-col gap-8 bg-white z-50">
         <div className="flex justify-center  items-center flex-col  w-full  h-36 gap-5 ">
           <h4 className="text-1xl font-bold">WHAT WE TEACH</h4>
           <h1 className="text-2xl sm:text-6xl font-bold">
@@ -63,7 +63,7 @@ function Skills() {
           </h1>
         </div>
 
-        <div className="flex h-full w-full  flex-col sm:flex-row sm:flex-wrap  sm:justify-center gap-8 items-center bg-white  ">
+        <div className="flex h-[100vh] w-full  flex-col sm:flex-row sm:flex-wrap  sm:justify-center gap-8 items-center bg-white  ">
           {Data?.map((el, id) => {
             return (
               <div
@@ -101,11 +101,19 @@ function Skills() {
                 <hr className="bg-slate-500 w-60 bg-center self-center" />
                 <div className="h-20 w-1/1  flex justify-between items-center    bg-white ">
                   <div className="flex-row flex gap-4 px-4 sm:px-7">
-                    <img src="../images/lesson.png" className="h-6 w-6" alt="image" />
+                    <img
+                      src="../images/lesson.png"
+                      className="h-6 w-6"
+                      alt="image"
+                    />
                     <h5 className="font-bold"> {el.lesson}</h5>
                   </div>
                   <div className="flex-row flex gap-3 px-6 ">
-                    <img src="../images/user.png" className="h-6 w-6" alt="image" />
+                    <img
+                      src="../images/user.png"
+                      className="h-6 w-6"
+                      alt="image"
+                    />
                     <h5 className="font-bold">{el.person}</h5>
                   </div>
                 </div>

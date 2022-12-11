@@ -1,49 +1,48 @@
-/* eslint-disable @next/next/no-img-element */
-
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 
 const CardsMain = () => {
-  const cardVariants = {
-    offscreen: {
-      y: 0,
-    },
-    onscreen: {
-      y: -100,
-      transition: {
-        // type: "spring",
-        // bounce: 0.4,
-        duration: 4,
-      },
-    },
-  };
-  const cardVariantsDown = {
-    offscreen: {
-      y: 0,
-    },
-    onscreen: {
-      y: 70,
-      transition: {
-        // type: "spring",
-        // bounce: 0.4,
-        duration: 4,
-      },
-    },
-  };
-  const cardVariantsDowntwo = {
-    offscreen: {
-      y: 20,
-    },
-    onscreen: {
-      y: 180,
-      transition: {
-        // type: "spring",
-        // bounce: 0.4,
-        duration: 4,
-      },
-    },
-  };
+  const { scrollY, scrollYProgress } = useScroll();
+  // const cardVariants = {
+  //   offscreen: {
+  //     y: 0,
+  //   },
+  //   onscreen: {
+  //     y: -100,
+  //     transition: {
+  //       // type: "spring",
+  //       // bounce: 0.4,
+  //       duration: 4,
+  //     },
+  //   },
+  // };
+  // const cardVariantsDown = {
+  //   offscreen: {
+  //     y: 0,
+  //   },
+  //   onscreen: {
+  //     y: 70,
+  //     transition: {
+  //       // type: "spring",
+  //       // bounce: 0.4,
+  //       duration: 4,
+  //     },
+  //   },
+  // };
+  // const cardVariantsDowntwo = {
+  //   offscreen: {
+  //     y: 20,
+  //   },
+  //   onscreen: {
+  //     y: 180,
+  //     transition: {
+  //       // type: "spring",
+  //       // bounce: 0.4,
+  //       duration: 4,
+  //     },
+  //   },
+  // };
   return (
-    <div className="flex h-full w-[110vw] pt-52  justify-center items-center bg-#ebeef4 relative left-[-6vw] overflow-hidden gap-6">
+    <motion.div className="flex min-h-[100vh] w-[110vw] mt-20  justify-center items-center bg-#ebeef4 relative left-[-6vw]  gap-6  ">
       {/* Card Coantainer 1 */}
       <motion.div>
         <motion.img
@@ -54,18 +53,25 @@ const CardsMain = () => {
         />
       </motion.div>
       {/* Card Coantainer 2 */}
-      <div className="heyyy  ">
-        <div className="h-two py-3">
+      <motion.div
+        className="heyyy  "
+        style={{
+          position: "relative",
+          top: -scrollY.current / 4,
+        }}
+      >
+        <motion.div className="h-two py-3">
           <motion.img
             className="two  h-[460px] w-[220px]"
             src="../images/card5.png"
             alt="image"
+
             // initial="offscreen"
             // whileInView="onscreen"
             // viewport={{ once: false, amount: "all" }}
             // variants={cardVariants}
           />
-        </div>
+        </motion.div>
 
         <div className="h-three py-3">
           <motion.img
@@ -78,35 +84,53 @@ const CardsMain = () => {
             // variants={cardVariants}
           />
         </div>
-      </div>
+      </motion.div>
 
       {/* Card Coantainer 3 */}
-      <div className="h-four ">
+      <motion.div
+        className="h-four "
+        style={{
+          position: "relative",
+          top: -scrollY.current / 4,
+        }}
+      >
         <motion.img
           animate={{ y: -50 }}
           className="two  h-[460px] w-[220px]"
           src="../images/card1.png"
           alt="image"
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: false, amount: "all" }}
-          variants={cardVariantsDown}
+          // initial="offscreen"
+          // whileInView="onscreen"
+          // viewport={{ once: false, amount: "all" }}
+          // variants={cardVariantsDown}
         />
-      </div>
+      </motion.div>
       {/* Card Coantainer 4 */}
-      <div className="h-five ">
+      <motion.div
+        className="h-five "
+        style={{
+          position: "relative",
+          top: -scrollY.current / 8,
+        }}
+      >
         <motion.img
           className="two h-[460px] w-[220px]"
           src="../images/card9.png"
           alt="image"
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: false, amount: "all" }}
-          variants={cardVariantsDowntwo}
+          // initial="offscreen"
+          // whileInView="onscreen"
+          // viewport={{ once: false, amount: "all" }}
+          // variants={cardVariantsDowntwo}
         />
-      </div>
+      </motion.div>
       {/* Card Coantainer 5 */}
-      <div className="hey translate-y-24">
+      <motion.div
+        className="hey translate-y-24"
+        style={{
+          position: "relative",
+          top: -scrollY.current / 4,
+        }}
+      >
         <div className="h-six py-3">
           <motion.img
             className="two h-[460px] w-[220px] "
@@ -126,21 +150,27 @@ const CardsMain = () => {
             alt="image"
           />
         </div>
-      </div>
+      </motion.div>
 
       {/* Card Coantainer 6 */}
-      <div className="h-seven ">
+      <motion.div
+        className="h-seven "
+        style={{
+          position: "relative",
+          top: -scrollY.current / 6,
+        }}
+      >
         <motion.img
           animate={{ y: -40 }}
           className="two h-[460px] w-[220px] "
           src="../images/card6.png"
           alt="image"
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: false, amount: "all" }}
-          variants={cardVariants}
+          // initial="offscreen"
+          // whileInView="onscreen"
+          // viewport={{ once: false, amount: "all" }}
+          // variants={cardVariants}
         />
-      </div>
+      </motion.div>
       {/* Card Coantainer 7 */}
       <div className="">
         <motion.img
@@ -154,7 +184,7 @@ const CardsMain = () => {
           // variants={cardVariants}
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default CardsMain;
