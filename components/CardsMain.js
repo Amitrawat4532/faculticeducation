@@ -38,8 +38,6 @@ const CardsMain = () => {
       {/* Card Coantainer 3 */}
       <motion.div
         className=" two h-four translate-y-[-200px]"
-       
-  
       >
         <motion.img
           // initial={{y: -300}}
