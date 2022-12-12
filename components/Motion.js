@@ -48,7 +48,8 @@ export default function Motion() {
           // className="mt-48"
           style={{
             position: "relative",
-            // scale: 1.2 - scrollY.current / 2000,
+            opacity: scrollYProgress,
+            // scale: 1.8 - scrollYProgress.current / 4,
             // top: scrollYProgress,
           }}
         >
