@@ -1,19 +1,59 @@
 /* eslint-disable @next/next/no-img-element */
 
-import { motion } from "framer-motion";
+import { motion, useTransform, useScroll, useMotionValue } from "framer-motion";
+import { useEffect } from "react";
 
 const CardsMain = () => {
 
   const upVariant = {
      offscreen: {
-      y: -80,
+      y: -40,
     },
     onscreen: {
-      y: 10,
+      y:0,
       transition: {
         type: "ease-in",
         duration: 5,
       },
+    },
+  }
+
+  const { scrollY } = useScroll()
+
+  useEffect(() => {
+    return scrollY.onChange((latest) => {
+      console.log("Page scroll: ", latest)
+    })
+  }, [scrollY])
+
+  const x = scrollY;
+  // console.log(x.current)
+  const y = useTransform(x, [100, 600], [0, 150])
+  console.log(y)
+
+  // const newVar = {
+  //   initial: {
+  //     y: 0,
+  //   },
+  //   animate: {
+  //     y: y,
+  //   },
+  // }
+
+  const newVar = {
+    offscreen: {
+      y: 0,
+    },
+    onscreen: {
+      y:-((scrollY.current)/6)
+    },
+  }
+  const newVar2 = {
+    offscreen: {
+      y: 0,
+    },
+    onscreen: {
+      y:-y
     },
   }
 
@@ -55,9 +95,9 @@ const CardsMain = () => {
       {/* Card Coantainer 3 */}
       <div className="h-four ">
         <motion.img
-          initial={{ y: 0 }}
-          animate={{ y: -50 }}
           className="two "
+          initial={{y: 0}}
+          animate={{y:-(scrollY.current)}}
           src="../images/card1.webp"
           alt="image"
         />
@@ -66,6 +106,9 @@ const CardsMain = () => {
       {/* Card Coantainer 4 */}
       <div className="h-five ">
         <motion.img
+          initial="offscreen"
+          animate="onscreen"
+          variants={newVar}
           className="two "
           src="../images/card9.webp"
           alt="image"
@@ -75,6 +118,10 @@ const CardsMain = () => {
       <div className="hey flex flex-col gap-10">
         <div className="h-six">
           <motion.img
+          initial="offscreen"
+          animate="onscreen"
+          variants={newVar2}
+          viewport={{ once: false,  amount: "some" }}
             className="two "
             src="../images/card7.webp"
             alt="image"
