@@ -1,19 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { motion, useScroll } from "framer-motion";
-
+import { useState, useEffect } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import CardsMain from "./CardsMain";
 import Scrollpage from "./Scrollpage";
 import Skills from "./Skills";
 
 export default function Motion() {
-  const { scrollY, scrollYProgress } = useScroll();
- 
+  const { scrollY, scrollYProgress } = useScroll(); 
   const [val, setVal] = useState()
+  const op = useTransform(scrollY, [0,120], [0,1])
 
   useEffect(() => {
     return scrollY.onChange((latest) => {
       setVal(latest)
-      console.log("Page scroll: ", latest)
     })
   }, [scrollY])
 
@@ -36,7 +34,7 @@ export default function Motion() {
         <motion.div
           style={{
             position: "relative",
-            opacity: scrollYProgress,
+            opacity: op ,
           }}
         >
           <CardsMain />
