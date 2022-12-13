@@ -4,7 +4,7 @@ const CardsMain = () => {
   const { scrollY, scrollYProgress } = useScroll();
 
   return (
-    <motion.div className="flex min-h-[170vh] w-[110vw] mt-10  justify-center items-center bg-#ebeef4 relative left-[-6vw]  gap-6  ">
+    <motion.div className="flex  w-[110vw]   justify-center items-center bg-#ebeef4 relative left-[-6vw]  gap-6  ">
       {/* Card Coantainer 1 */}
       <motion.div>
         <motion.img
@@ -20,13 +20,14 @@ const CardsMain = () => {
           style={{
             position: "relative",
             top: scrollY.current / 1,
+            left: scrollY.current / 5,
           }}
         >
           <motion.img
             className="two  h-[460px] w-[220px]"
             src="../images/card5.png"
             alt="image"
-            animate={{ y: -350 }}
+            animate={{ y: -350, x: -80 }}
           />
         </motion.div>
 
@@ -45,10 +46,11 @@ const CardsMain = () => {
         style={{
           position: "relative",
           top: scrollY.current / 1,
+          left: scrollY.current / 5,
         }}
       >
         <motion.img
-          animate={{ y: -400 }}
+          animate={{ y: -400, x: -70 }}
           className="two  h-[460px] w-[220px]"
           src="../images/card1.png"
           alt="image"
@@ -70,14 +72,14 @@ const CardsMain = () => {
           style={{
             position: "relative",
             top: scrollY.current / 2,
+            right: scrollY.current / 12,
           }}
         >
           <motion.img
             className="two  h-[460px] w-[220px]"
             src="../images/card7.png"
             alt="image"
-            // animate={{ y: -710 }}
-            animate={{ y: -250 }}
+            animate={{ y: -100, x: 30 }}
           />
         </motion.div>
 
@@ -104,10 +106,11 @@ const CardsMain = () => {
         style={{
           position: "relative",
           top: scrollY.current / 1,
+          left: -scrollY.current / 5,
         }}
       >
         <motion.img
-          animate={{ y: -600 }}
+          animate={{ y: -600, x: 70 }}
           className="two h-[460px] w-[220px] "
           src="../images/card8.png"
           alt="image"
