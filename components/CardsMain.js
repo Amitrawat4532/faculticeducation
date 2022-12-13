@@ -2,6 +2,8 @@ import { motion, useScroll } from "framer-motion";
 
 const CardsMain = () => {
   const { scrollY } = useScroll();
+  console.log('30',scrollY.current/30)
+  console.log('saada',scrollY.current)
 
   return (
     <motion.div className="flex  w-[110vw] justify-center items-center bg-#ebeef4 relative left-[-6vw]  gap-6">
@@ -16,11 +18,11 @@ const CardsMain = () => {
       {/* Card Coantainer 2 */}
       <motion.div className="heyyy  translate-y-[-20px]">
         <motion.div
-          className="h-two py-3 translate-y-[-50px]"
+          className="h-two py-3 translate-y-[-50px] translate-x-[-15px]"
         >
           <motion.img
             className="two "
-            animate={{y: (scrollY.current)/6}}
+            animate={{x: (scrollY.current)/30 ,y: (scrollY.current)/6}}
             src="../images/card5.png"
             alt="image"
           />
@@ -37,11 +39,11 @@ const CardsMain = () => {
 
       {/* Card Coantainer 3 */}
       <motion.div
-        className=" two h-four translate-y-[-200px]"
+        className=" two h-four translate-y-[-200px] translate-x-[-15px]"
       >
         <motion.img
           // initial={{y: -300}}
-          animate={{y: (scrollY.current)/6}}
+          animate={{ x: (scrollY.current)/30 ,y: (scrollY.current)/6}}
           src="../images/card1.png"
           alt="image"
         />
@@ -58,11 +60,11 @@ const CardsMain = () => {
 
       <motion.div className="heyyy  ">
         <motion.div
-          className="h-two py-3 translate-y-[-50px]"
+          className="h-two py-3 translate-y-[-50px] translate-x-[15px]"
           
         >
           <motion.img
-            animate={{y: (scrollY.current)/6}}
+            animate={{ x: -(scrollY.current)/30 ,y: (scrollY.current)/6}}
             className="two"
             src="../images/card7.png"
             alt="image"
@@ -88,11 +90,11 @@ const CardsMain = () => {
       </motion.div>
       {/* Card Coantainer 7 */}
       <motion.div
-        className="last-card translate-y-[-300px]"
+        className="last-card translate-y-[-300px] translate-x-[15px]"
       >
         <motion.img
           className="two "
-          animate={{y: (scrollY.current)/6}}
+          animate={{x: -(scrollY.current)/30 ,y: (scrollY.current)/6}}
           src="../images/card8.png"
           alt="image"
         />

@@ -6,8 +6,8 @@ import Skills from "./Skills";
 
 export default function Motion() {
   const { scrollY, scrollYProgress } = useScroll(); 
-  const [val, setVal] = useState()
-  const op = useTransform(scrollY, [0,120], [0,1])
+  const [val, setVal] = useState(0)
+  const op = useTransform(scrollY, [0,250], [0,1])
 
   useEffect(() => {
     return scrollY.onChange((latest) => {
@@ -25,7 +25,7 @@ export default function Motion() {
           height: "100vh",
           maxWidth: "115vw",
           opacity: 1,
-          clipPath: `circle(${val}vw at 50% 50%)`,
+          clipPath: `circle(${(val)/4}vw at 50% 50%)`,
           zIndex: "10",
           overflowX: "hidden",
           overflowY: scrollYProgress.current > 0.97 ? "scroll" : "hidden",
