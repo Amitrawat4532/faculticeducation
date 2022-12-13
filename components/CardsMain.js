@@ -19,15 +19,15 @@ const CardsMain = () => {
           className="h-two py-3"
           style={{
             position: "relative",
-            top: scrollY.current / 1,
-            left: scrollY.current / 5,
+            top: scrollY.current / 12,
+            left: scrollY.current / 12,
           }}
         >
           <motion.img
             className="two  h-[460px] w-[220px]"
             src="../images/card5.png"
             alt="image"
-            animate={{ y: -350, x: -80 }}
+            animate={{ y: -10, x: -30 }}
           />
         </motion.div>
 
@@ -36,6 +36,7 @@ const CardsMain = () => {
             className="two h-[460px] w-[220px]"
             src="../images/card3.png"
             alt="image"
+            animate={{ y: 30 }}
           />
         </div>
       </motion.div>
@@ -45,23 +46,30 @@ const CardsMain = () => {
         className="h-four "
         style={{
           position: "relative",
-          top: scrollY.current / 1,
-          left: scrollY.current / 5,
+          top: scrollY.current / 12,
+          left: scrollY.current / 12,
         }}
       >
         <motion.img
-          animate={{ y: -400, x: -70 }}
+          animate={{ y: -20, x: -30 }}
           className="two  h-[460px] w-[220px]"
           src="../images/card1.png"
           alt="image"
         />
       </motion.div>
       {/* Card Coantainer 4 */}
-      <motion.div className="h-five ">
+      <motion.div
+        className="h-five "
+        style={{
+          postion: "relative",
+          top: scrollY.current,
+        }}
+      >
         <motion.img
           className="two h-[460px] w-[220px]"
           src="../images/card9.png"
           alt="image"
+          animate={{ y: 0 }}
         />
       </motion.div>
       {/* Card Coantainer 5 */}
@@ -71,7 +79,7 @@ const CardsMain = () => {
           className="h-two py-3"
           style={{
             position: "relative",
-            top: scrollY.current / 2,
+            top: scrollY.current / 12,
             right: scrollY.current / 12,
           }}
         >
@@ -79,7 +87,7 @@ const CardsMain = () => {
             className="two  h-[460px] w-[220px]"
             src="../images/card7.png"
             alt="image"
-            animate={{ y: -100, x: 30 }}
+            animate={{ y: 30, x: 30 }}
           />
         </motion.div>
 
@@ -88,7 +96,7 @@ const CardsMain = () => {
             className="two h-[460px] w-[220px]"
             src="../images/card10.png"
             alt="image"
-            animate={{ y: 90 }}
+            animate={{ y: 70 }}
           />
         </motion.div>
       </motion.div>
@@ -105,15 +113,16 @@ const CardsMain = () => {
       <motion.div
         style={{
           position: "relative",
-          top: scrollY.current / 1,
-          left: -scrollY.current / 5,
+          top: scrollY.current / 12,
+          left: -scrollY.current / 12,
         }}
       >
         <motion.img
-          animate={{ y: -600, x: 70 }}
+          animate={{ y: -250, x: 20 }}
           className="two h-[460px] w-[220px] "
           src="../images/card8.png"
           alt="image"
+          anitia
         />
       </motion.div>
     </motion.div>

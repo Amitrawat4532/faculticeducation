@@ -13,7 +13,7 @@ export default function Motion() {
   if (typeof window !== "undefined") {
     // browser code
     window.addEventListener("scroll", () => {
-      console.log(scrollYProgress.current, "----scroll y progres");
+      // console.log(scrollYProgress.current, "----scroll y progres");
       setScrollVal(window.pageYOffset / 5);
       if (scrollY.current >= 410) {
         setScrollDOne(true);
@@ -43,14 +43,9 @@ export default function Motion() {
         }}
       >
         <motion.div
-          // initial={{ scale: 1.5, transition: { duration: 50 } }}
-          // whileInView={{ scale: 1 }}
-          // className="mt-48"
           style={{
             position: "relative",
             opacity: scrollYProgress,
-            // scale: 1.8 - scrollYProgress.current / 4,
-            // top: scrollYProgress,
           }}
         >
           <CardsMain />
