@@ -51,7 +51,7 @@ const CardsMain = () => {
         }}
       >
         <motion.img
-          animate={{ y: -20, x: -30 }}
+          animate={{ y: -130, x: -30 }}
           className="two  h-[460px] w-[220px]"
           src="../images/card1.png"
           alt="image"
