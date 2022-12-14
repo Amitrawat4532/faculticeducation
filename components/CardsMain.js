@@ -53,8 +53,8 @@ const CardsMain = () => {
       {/* Card Coantainer 5 */}
 
       <motion.div className="heyyy  "
-        // animate={{ y: scrollY.current >= 200 ? scrollY.current/5 : scrollY.current/12 }}
-        animate={{ y: scrollY.current >= 250 && scrollY.current / 10 }}
+        animate={{ y: scrollY.current >= 200 ? scrollY.current/5 : scrollY.current/10 }}
+        // animate={{ y: scrollY.current >= 250 && scrollY.current / 10 }}
         
         >
         <motion.div className="h-two py-3 translate-y-[-50px] translate-x-[15px]">
