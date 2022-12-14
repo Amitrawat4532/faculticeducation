@@ -23,14 +23,14 @@ export default function Motion() {
     });
   }
 
-  const getScroll = () => {
+  const getScroll = (event) => {
     const { scrollTop } = event.target;
     // const scroll = scrollHeight - scrollTop - clientHeight;
     // console.log(scrollHeight, scrollTop, clientHeight, scroll);
-
+    console.log(scrollTop);
     if (scrollTop <= 400) {
       // We are not at the bottom of the scroll content
-      // console.log(scrollTop);
+
       setScrollVal(scrollTop);
     } else if (scrollTop === 400) {
       // We are at the bottom
@@ -40,7 +40,7 @@ export default function Motion() {
   return (
     <>
       <motion.div
-        onScroll={getScroll}
+        onScroll={(e) => getScroll(e)}
         className="  flex-col flex fixed "
         style={{
           background: "white",
