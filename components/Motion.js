@@ -24,15 +24,15 @@ export default function Motion() {
   }
 
   const getScroll = () => {
-    const { scrollHeight, scrollTop, clientHeight } = event.target;
-    const scroll = scrollHeight - scrollTop - clientHeight;
+    const { scrollTop } = event.target;
+    // const scroll = scrollHeight - scrollTop - clientHeight;
     // console.log(scrollHeight, scrollTop, clientHeight, scroll);
 
-    if (scrollTop <= 300) {
+    if (scrollTop <= 400) {
       // We are not at the bottom of the scroll content
-      console.log(scrollTop);
+      // console.log(scrollTop);
       setScrollVal(scrollTop);
-    } else if (scrollTop === 300) {
+    } else if (scrollTop === 400) {
       // We are at the bottom
     }
   };

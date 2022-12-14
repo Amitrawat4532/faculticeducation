@@ -1,6 +1,6 @@
 import { motion, useScroll } from "framer-motion";
 
-const CardsMain = ({ scrollCheck, scrollVal }) => {
+const CardsMain = ({ scrollVal }) => {
   // const ref = useRef(null);
   const { scrollY, scrollYProgress } = useScroll();
   // console.log(scrollY.current / 5);
@@ -15,6 +15,7 @@ const CardsMain = ({ scrollCheck, scrollVal }) => {
           style={{
             top: scrollY.current / 12,
             left: scrollY.current / 12,
+            transform: `translateY(${scrollVal}px)`,
           }}
         >
           <motion.img
