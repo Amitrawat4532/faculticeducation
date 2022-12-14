@@ -76,7 +76,7 @@ const CardsMain = ({ divScroll }) => {
           className="h-five "
           style={{
             postion: "relative",
-            // transform: `translateY(${divScroll}px)`,
+            transform: `translateY(${divScroll}px)`,
 
             top: scrollY.current,
           }}

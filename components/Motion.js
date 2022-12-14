@@ -15,7 +15,7 @@ export default function Motion() {
     // browser code
     window.addEventListener("scroll", () => {
       // console.log(scrollYProgress.current, "----scroll y progres");
-      setScrollVal(window.pageYOffset / 5);
+      setScrollVal(window.pageYOffset / 4);
       if (scrollY.current >= 410) {
         setScrollDOne(true);
       } else {
@@ -26,8 +26,8 @@ export default function Motion() {
 
   const getScroll = (event) => {
     const { scrollTop } = event.target;
-    if (scrollTop <= 350) {
-      setScrollVal(scrollTop);
+    if (scrollTop <= 800) {
+      setDivScroll(scrollTop);
     } else if (scrollTop === 400) {
       // We are at the bottom
     }
