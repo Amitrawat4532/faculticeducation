@@ -24,21 +24,13 @@ export default function Motion() {
   }
 
   const getScroll = (event) => {
-<<<<<<< HEAD
-    const { scrollTop, scrollHeight, clientHeight } = event.target;
-    // const scroll = scrollHeight - scrollTop - clientHeight;
-    // console.log(scrollHeight, scrollTop, clientHeight);
-    console.log(scrollTop);
-    if (scrollTop <= 400 && scrollTop > 17) {
-=======
     const { scrollTop, scroll } = event.target;
     // const scroll = scrollHeight - scrollTop - clientHeight;
     // console.log(scrollHeight, scrollTop, clientHeight, scroll);
-    console.log('st',scrollTop);
-    console.log('sc',scroll);
-    console.log(event)
+    console.log("st", scrollTop);
+    console.log("sc", scroll);
+    console.log(event);
     if (scrollTop <= 400) {
->>>>>>> 0dfe002d202b519875aa69cc7df759b316032a9e
       // We are not at the bottom of the scroll content
 
       setScrollVal(scrollTop);
@@ -47,7 +39,7 @@ export default function Motion() {
     }
   };
 
-  console.log(scrollVal)
+  console.log(scrollVal);
 
   return (
     <>
