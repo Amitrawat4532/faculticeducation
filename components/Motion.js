@@ -74,7 +74,7 @@ export default function Motion() {
             opacity: scrollYProgress,
           }}
         >
-          <CardsMain scrollCheck={scrollYProgress} scrollVal={scrollVal / 25} />
+          <CardsMain scrollCheck={scrollYProgress} scrollVal={scrollVal / 20} />
           <Scrollpage />
           <Skills />
         </motion.div>
