@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 
 import CardsMain from "./CardsMain";
@@ -23,9 +23,24 @@ export default function Motion() {
     });
   }
 
+  const getScroll = () => {
+    const { scrollHeight, scrollTop, clientHeight } = event.target;
+    const scroll = scrollHeight - scrollTop - clientHeight;
+    // console.log(scrollHeight, scrollTop, clientHeight, scroll);
+
+    if (scrollTop <= 300) {
+      // We are not at the bottom of the scroll content
+      console.log(scrollTop);
+      setScrollVal(scrollTop);
+    } else if (scrollTop === 300) {
+      // We are at the bottom
+    }
+  };
+
   return (
     <>
       <motion.div
+        onScroll={getScroll}
         className="  flex-col flex fixed "
         style={{
           background: "white",
@@ -38,7 +53,6 @@ export default function Motion() {
           // transition: ".2s all ease",
           overflowX: "hidden",
           overflowY: scrollYProgress.current > 0.97 ? "scroll" : "hidden",
-
           // overflowY: "scroll",
         }}
       >
@@ -48,7 +62,7 @@ export default function Motion() {
             opacity: scrollYProgress,
           }}
         >
-          <CardsMain scrollCheck={scrollYProgress} />
+          <CardsMain scrollCheck={scrollYProgress} scrollVal={scrollVal / 4} />
           <Scrollpage />
           <Skills />
         </motion.div>

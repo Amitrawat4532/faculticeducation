@@ -1,30 +1,26 @@
 import { motion, useScroll } from "framer-motion";
-import { useRef } from "react";
 
-const CardsMain = ({ scrollCheck }) => {
-  const ref = useRef(null);
-  const { scrollY, scrollYProgress } = useScroll({ target: ref });
-
+const CardsMain = ({ scrollCheck, scrollVal }) => {
+  // const ref = useRef(null);
+  const { scrollY, scrollYProgress } = useScroll();
+  // console.log(scrollY.current / 5);
   return (
     <>
       <motion.div
         className="flex  w-[110vw] justify-center items-center bg-#ebeef4 relative left-[-6vw]  gap-6  "
-        ref={ref}
+        // ref={ref}
       >
         {/* Card Coantainer 1 */}
-        <motion.div>
+        <motion.div
+          style={{
+            top: scrollY.current / 12,
+            left: scrollY.current / 12,
+          }}
+        >
           <motion.img
             className="two h-[460px] w-[220px]"
             src="../images/card4.png"
             alt="image"
-            style={{
-              transform:
-                scrollCheck.current > 0.95 &&
-                `translateY(${scrollY.current}px)`,
-              // transition: "0.5s all ease",
-              // top: scrollY.current / 12,
-              left: scrollY.current / 12,
-            }}
           />
         </motion.div>
         {/* Card Coantainer 2 */}
@@ -61,15 +57,14 @@ const CardsMain = ({ scrollCheck }) => {
           className="h-four "
           style={{
             position: "relative",
-            transform:
-              scrollCheck.current > 0.95 && `translateY(${scrollY.current}px)`,
-            // transition: "0.5s all ease",
-            // top: scrollY.current / 12,
+            transform: `translateY(${scrollVal}px)`,
+            // transition: "15s all ease",
+            top: scrollY.current / 12,
             left: scrollY.current / 12,
           }}
         >
           <motion.img
-            animate={{ x: -30 }}
+            animate={{ x: -30, y: -90 }}
             className="two  h-[460px] w-[220px]"
             src="../images/card1.png"
             alt="image"
@@ -80,6 +75,8 @@ const CardsMain = ({ scrollCheck }) => {
           className="h-five "
           style={{
             postion: "relative",
+            transform: `translateY(${scrollVal}px)`,
+
             top: scrollY.current,
           }}
         >
@@ -131,6 +128,8 @@ const CardsMain = ({ scrollCheck }) => {
         <motion.div
           style={{
             position: "relative",
+            transform: `translateY(${scrollVal}px)`,
+
             top: scrollY.current / 12,
             left: -scrollY.current / 12,
           }}
