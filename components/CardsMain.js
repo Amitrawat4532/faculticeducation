@@ -1,6 +1,6 @@
 import { motion, useScroll } from "framer-motion";
 
-const CardsMain = ({ scrollVal }) => {
+const CardsMain = ({ divScroll }) => {
   // const ref = useRef(null);
   const { scrollY, scrollYProgress } = useScroll();
   // console.log(scrollY.current / 5);
@@ -15,7 +15,7 @@ const CardsMain = ({ scrollVal }) => {
           style={{
             top: scrollY.current / 12,
             left: scrollY.current / 12,
-            // transform: `translateY(${scrollVal}px)`,
+            // transform: `translateY(${divScroll}px)`,
           }}
         >
           <motion.img
@@ -58,11 +58,9 @@ const CardsMain = ({ scrollVal }) => {
           className="h-four "
           style={{
             position: "relative",
-            // transform: `translateY(${scrollVal}px)`,
+            transform: `translateY(${divScroll}px)`,
             // transition: ".2s all ease",
-            top: scrollY.current / 24,
-            // top: `translateY(${scrollVal}px)`,
-
+            // top: scrollY.current / 24,
             left: scrollY.current / 12,
           }}
         >
@@ -78,7 +76,7 @@ const CardsMain = ({ scrollVal }) => {
           className="h-five "
           style={{
             postion: "relative",
-            // transform: `translateY(${scrollVal}px)`,
+            // transform: `translateY(${divScroll}px)`,
 
             top: scrollY.current,
           }}
@@ -131,9 +129,7 @@ const CardsMain = ({ scrollVal }) => {
         <motion.div
           style={{
             position: "relative",
-            // transform: `translateY(${scrollVal}px)`,
-
-            top: scrollY.current / 12,
+            transform: `translateY(${divScroll}px)`,
             left: -scrollY.current / 12,
           }}
         >
