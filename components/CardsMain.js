@@ -15,7 +15,7 @@ const CardsMain = ({ scrollVal }) => {
           style={{
             top: scrollY.current / 12,
             left: scrollY.current / 12,
-            transform: `translateY(${scrollVal}px)`,
+            // transform: `translateY(${scrollVal}px)`,
           }}
         >
           <motion.img
@@ -31,8 +31,8 @@ const CardsMain = ({ scrollVal }) => {
             className="h-two py-3"
             style={{
               position: "relative",
-              top: scrollY.current / 12,
-              left: scrollY.current / 12,
+              top: scrollY.current / 24,
+              left: scrollY.current / 24,
             }}
           >
             <motion.img
@@ -58,14 +58,16 @@ const CardsMain = ({ scrollVal }) => {
           className="h-four "
           style={{
             position: "relative",
-            transform: `translateY(${scrollVal}px)`,
-            // transition: "15s all ease",
-            top: scrollY.current / 12,
+            // transform: `translateY(${scrollVal}px)`,
+            // transition: ".2s all ease",
+            top: scrollY.current / 24,
+            // top: `translateY(${scrollVal}px)`,
+
             left: scrollY.current / 12,
           }}
         >
           <motion.img
-            animate={{ x: -30, y: -90 }}
+            animate={{ x: -30, y: -80 }}
             className="two  h-[460px] w-[220px]"
             src="../images/card1.png"
             alt="image"
@@ -76,7 +78,7 @@ const CardsMain = ({ scrollVal }) => {
           className="h-five "
           style={{
             postion: "relative",
-            transform: `translateY(${scrollVal}px)`,
+            // transform: `translateY(${scrollVal}px)`,
 
             top: scrollY.current,
           }}
@@ -95,15 +97,15 @@ const CardsMain = ({ scrollVal }) => {
             className="h-two py-3"
             style={{
               position: "relative",
-              top: scrollY.current / 12,
-              right: scrollY.current / 12,
+              top: scrollY.current / 24,
+              right: scrollY.current / 24,
             }}
           >
             <motion.img
               className="two  h-[460px] w-[220px]"
               src="../images/card7.png"
               alt="image"
-              animate={{ y: 30, x: 30 }}
+              animate={{ y: 30, x: 12 }}
             />
           </motion.div>
 
@@ -129,7 +131,7 @@ const CardsMain = ({ scrollVal }) => {
         <motion.div
           style={{
             position: "relative",
-            transform: `translateY(${scrollVal}px)`,
+            // transform: `translateY(${scrollVal}px)`,
 
             top: scrollY.current / 12,
             left: -scrollY.current / 12,

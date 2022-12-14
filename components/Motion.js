@@ -8,7 +8,7 @@ import Skills from "./Skills";
 export default function Motion() {
   const { scrollY, scrollYProgress } = useScroll();
   const [scrollDone, setScrollDOne] = useState(false);
-  const [scrollVal, setScrollVal] = useState(0);
+  const [scrollVal, setScrollVal] = useState(17);
 
   if (typeof window !== "undefined") {
     // browser code
@@ -24,11 +24,11 @@ export default function Motion() {
   }
 
   const getScroll = (event) => {
-    const { scrollTop } = event.target;
+    const { scrollTop, scrollHeight, clientHeight } = event.target;
     // const scroll = scrollHeight - scrollTop - clientHeight;
-    // console.log(scrollHeight, scrollTop, clientHeight, scroll);
+    // console.log(scrollHeight, scrollTop, clientHeight);
     console.log(scrollTop);
-    if (scrollTop <= 400) {
+    if (scrollTop <= 400 && scrollTop > 17) {
       // We are not at the bottom of the scroll content
 
       setScrollVal(scrollTop);
