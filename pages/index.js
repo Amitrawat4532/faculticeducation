@@ -1,8 +1,8 @@
 import Heropage from "../components/Heropage";
 import Motion from "../components/Motion";
-import Scrollpage from "../components/Scrollpage";
-import Skills from "../components/Skills";
-import Services from "../components/Services";
+// import Scrollpage from "../components/Scrollpage";
+// import Skills from "../components/Skills";
+// import Services from "../components/Services";
 
 export default function Home() {
   return (
