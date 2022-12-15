@@ -60,7 +60,7 @@ const CardsMain = ({ divScroll }) => {
             position: "relative",
             transform: `translateY(${divScroll}px)`,
             // transition: ".2s all ease",
-            // top: scrollY.current / 24,
+            top: scrollY.current / 24,
             left: scrollY.current / 12,
           }}
         >
@@ -131,6 +131,7 @@ const CardsMain = ({ divScroll }) => {
             position: "relative",
             transform: `translateY(${divScroll}px)`,
             left: -scrollY.current / 12,
+            top: scrollY.current / 24,
           }}
         >
           <motion.img
