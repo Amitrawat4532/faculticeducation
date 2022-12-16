@@ -1,13 +1,13 @@
-import Random from '/components/Random'
-import Circle from '/components/Circle';
+import Random from "/components/Random";
+import Circle from "/components/Circle";
 
 const Scroll = () => {
   return (
-    <div className='relative'>
-      <Random/>
+    <div className="relative">
+      <Random />
       <Circle />
     </div>
-  )
-}
+  );
+};
 
-export default Scroll
+export default Scroll;

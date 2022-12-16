@@ -1,33 +1,75 @@
-import * as React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, motionValue, useScroll, useTransform } from "framer-motion";
+import { useEffect, useState } from "react";
 
-const Animationbox = () => {
-  const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0, 0.7], [0.4, 2]);
+const Animationbox = (props) => {
+  const { scrollY } = useScroll();
+  const [scrVal, setScrVal] = useState(scrollY.current);
+  const v = motionValue(scrVal);
+
+  useEffect(() => {
+    scrollY.onChange((latest) => {
+      setScrVal(latest);
+    });
+  }, [scrollY]);
+
+  const w = useTransform(v, [150, 400], [45, 90]);
+  const dashOff = useTransform(v, [350, 700], [-425, -925]);
+  const length = useTransform(v, [280, 0], [1010, 1]);
+
+  // increasing container width -> 153px-> 460px from [45vw -> 90vw] can be achieved by useTransorm ==> completed
+  // starting from 350 playing with strokeDashOffset and strokeDashArray to 750 ==> completed
+  // after 750 we have to change background along with image inside svg initially opacity and changing to one along with background color
+  // strokeDashOffset final val -> -925  initial val ->  -425
+
   return (
-    <>
-      <div
-        className="flex justify-center items-end  w-full h-[200vh] "
-        style={{
-          background: "rgb(235,238,244)",
-        }}
+    <section
+      className="flex items-center justify-center h-[300vh]"
+      style={{
+        background: "rgb(235,238,244)",
+      }}
+    >
+      <motion.div
+        className=" bg-white  mt-5 rounded-[5rem] py-16 "
+        animate={{ width: `${w.current}vw` }}
+        style={{ position: "sticky" }}
       >
-        <motion.div
-          className=" border-2 border-black  flex Items-center justify-center mb-12 "
+        <svg
+          className=" h-[30rem] w-fit flex m-auto p-10 inset-0"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 328 725"
+          height="30rem"
+          width="auto"
+          shapeRendering="geometricPrecision"
+          textRendering="geometricPrecision"
           style={{
-            // width: "200vh",
-            // height: "600px",
-            width: "100vh",
-            height: "300px",
-            background: "white",
-            scale,
-            borderRadius: "50px",
+            opacity: 1,
           }}
+          {...props}
         >
-          <img src="/images/cardscroll.png" className="pt-12" />
-        </motion.div>
-      </div>
-    </>
+          <motion.path
+            d="M51.2 2h225.6c8.994 0 15.619.002 20.855.43 5.212.425 8.871 1.264 11.965 2.84a29.997 29.997 0 0 1 13.11 13.11c1.576 3.094 2.415 6.753 2.841 11.965.427 5.236.429 11.861.429 20.855v622.6c0 8.994-.002 15.619-.429 20.855-.426 5.212-1.265 8.871-2.841 11.965a29.994 29.994 0 0 1-13.11 13.11c-3.094 1.577-6.753 2.415-11.965 2.841-5.236.427-11.861.429-20.855.429H51.2c-8.994 0-15.619-.002-20.855-.429-5.212-.426-8.871-1.264-11.965-2.841a29.997 29.997 0 0 1-13.11-13.11c-1.576-3.094-2.415-6.753-2.84-11.965C2.001 689.419 2 682.794 2 673.8V51.2c0-8.994.002-15.619.43-20.855.425-5.212 1.264-8.871 2.84-11.965A30 30 0 0 1 18.38 5.27c3.094-1.576 6.753-2.415 11.965-2.84C35.581 2.001 42.206 2 51.2 2Z"
+            fill="none"
+            stroke="#4281ee"
+            strokeWidth={4}
+            strokeLinecap="round"
+            strokeDashoffset={dashOff}
+            strokeDasharray={length}
+          />
+          <motion.path
+            d="M276.8 723H51.2c-8.994 0-15.619-.002-20.855-.43-5.212-.425-8.871-1.264-11.965-2.84a29.997 29.997 0 0 1-13.11-13.11c-1.576-3.094-2.415-6.753-2.841-11.965C2.002 689.419 2 682.794 2 673.8V51.2c0-8.994.002-15.619.429-20.855.426-5.212 1.265-8.871 2.841-11.965A29.994 29.994 0 0 1 18.38 5.27c3.094-1.577 6.753-2.415 11.965-2.841C35.581 2.002 42.206 2 51.2 2h225.6c8.994 0 15.619.002 20.855.429 5.212.426 8.871 1.264 11.965 2.841a29.997 29.997 0 0 1 13.11 13.11c1.576 3.094 2.415 6.753 2.84 11.965.428 5.236.43 11.861.43 20.855v622.6c0 8.994-.002 15.619-.43 20.855-.425 5.212-1.264 8.871-2.84 11.965a30 30 0 0 1-13.11 13.11c-3.094 1.576-6.753 2.415-11.965 2.84-5.236.428-11.861.43-20.855.43Z"
+            fill="none"
+            stroke="#fd7a47"
+            strokeWidth={4}
+            strokeLinecap="round"
+            strokeDashoffset={dashOff}
+            strokeDasharray={length}
+          />
+        </svg>
+      </motion.div>
+    </section>
   );
 };
+
 export default Animationbox;
+
+// How to make a horizontal scroll using Next.JS - GSAPhttps://greensock.com › Forums › GSAP
