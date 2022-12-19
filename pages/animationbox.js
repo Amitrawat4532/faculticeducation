@@ -17,8 +17,10 @@ const Animationbox = (props) => {
 
   const w = useTransform(v, [150, 400], [45, 90]);
   const dashOff = useTransform(v, [350, 700], [-425, -925]);
+  const dashOffTwo = useTransform(v, [200, 800], [948.8964233398438, 2000]);
   const length = useTransform(v, [200, 800], [1020, 2000]);
   const width = useTransform(v, [200, 800], [290, 1020]);
+
   console.log(length, width);
   // increasing container width -> 153px-> 460px from [45vw -> 90vw] can be achieved by useTransorm ==> completed
   // starting from 350 playing with strokeDashOffset and strokeDashArray to 750 ==> completed
@@ -91,6 +93,39 @@ const Animationbox = (props) => {
               strokeDasharray={length}
             />
           </svg>
+          {/* horizontal line */}
+          {/* <svg
+            id="ksp-line"
+            className="h-572ex w-full top-[-5.54vh] left-0 absolute ksp-line "
+            viewBox="0 0 340 576"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            transform="rotate(90deg)"
+          >
+            <motion.path
+              className="path"
+              opacity="0.8"
+              d="M-101 531.153C-101 531.153 -75.2392 519.232 -63 519.232C-15.0043 519.232 84.1054 661.591 129.002 487.277C173.899 312.963 198.326 199.5 221 123C239.883 59.2902 277.252 17.7752 315.5 5.67365C323.179 3.24417 330.893 2.00015 338.5 2C384 1.99912 373 81.3288 373 81.3288"
+              stroke="url(#paint0_linear_1619_18622)"
+              strokeWidth={4}
+              strokeLinecap="round"
+              strokeDasharray={dashOffTwo}
+              style={{ strokeDashoffset: "2158px" }}
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_1619_18622"
+                x1="191.583"
+                y1="168.933"
+                x2="589.278"
+                y2="167.715"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="white" />
+                <stop offset={1} stopColor="white" stopOpacity={0} />
+              </linearGradient>
+            </defs>
+          </svg> */}
         </motion.div>
       </section>
     </>
