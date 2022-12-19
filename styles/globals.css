@@ -8,3 +8,8 @@ html {
 body{
     overflow-x: hidden;
 }
+
+.phone_container {
+    background: linear-gradient(180deg,rgba(37, 70, 233, 0.42),rgb(227, 173, 133) 95.99%)
+    /* background: #2445e9; */
+}
