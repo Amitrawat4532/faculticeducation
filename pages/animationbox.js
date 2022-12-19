@@ -389,7 +389,7 @@ const Animationbox = (props) => {
         >
           Smooth Stable Seamless
         </motion.h1>
-
+        {/* div */}
         <motion.div
           initial="initial"
           animate="animate"
