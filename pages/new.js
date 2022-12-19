@@ -22,8 +22,8 @@ const New = (props) => {
   const opacity = useTransform(v, [700, 900], [0, 1]);
   const line = useTransform(v, [1200, 1800], [2240, 70]);
   const hideWidth = useTransform(v, [900, 1100], [5, 0]);
-  const opacityText = useTransform(v, [1000,1200], [0,1]);
-  const animateText = useTransform(v, [1000,1300], [10,0]);
+  const opacityText = useTransform(v, [1300,1500], [0,1]);
+  const animateText = useTransform(v, [1300,1500], [10,0]);
 
   const variant = {
     initial:{opacity: 0, y: 0},
