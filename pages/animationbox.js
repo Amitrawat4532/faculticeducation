@@ -335,7 +335,9 @@ const Animationbox = (props) => {
         style={{
           background: `${
             scrollY.current >= 800
-              ? `linear-gradient(180deg,rgba(36,69,233,${scrollYProgress.current}),#e3ad85 95.99%)`
+              ? `linear-gradient(180deg,rgba(36,69,233,${
+                  scrollYProgress.current + 5
+                }),#e3ad85 95.99%)`
               : "white"
           }`,
         }}
@@ -385,7 +387,7 @@ const Animationbox = (props) => {
           initial="initial"
           animate="animate"
           variants={variant}
-          className=" hidden md:block lg:text-5xl md:text-4xl text-2xl leading-none text-white absolute top-[25%] right-[calc(60%+15vh)] text-right w-[5rem] md:w-[10rem] lg:w-[12rem]"
+          className=" hidden md:block lg:text-5xl md:text-4xl text-2xl leading-none text-white absolute top-[25%] right-[calc(60%+15vh)] text-right w-[5rem] md:w-[10rem] lg:w-[12rem] font-normal"
         >
           Smooth Stable Seamless
         </motion.h1>
