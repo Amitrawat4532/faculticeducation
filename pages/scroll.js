@@ -1,6 +1,8 @@
 // import React from "react";
 // import motion from "framer-motion";
 
+// working with scroll
+
 // const scroll = () => {
 //   return (
 //     <motion.div>
