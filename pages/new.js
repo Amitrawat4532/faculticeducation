@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { motion, motionValue, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
-import Scrollpage from '/components/Scrollpage'
+import Scrollpage from "/components/Scrollpage";
+
 
 const New = (props) => {
   const { scrollY, scrollYProgress } = useScroll();
@@ -10,7 +11,6 @@ const New = (props) => {
   useEffect(() => {
     scrollY.onChange((latest) => {
       setScrVal(latest);
-      // console.log(latest);
     });
   }, [scrollY]);
 
@@ -19,9 +19,16 @@ const New = (props) => {
   const dashOff = useTransform(v, [350, 700], [-425, -925]);
   const ldArray = useTransform(v, [450, 750], [290, 1020]);
   const lrArray = useTransform(v, [450, 750], [2000, 1020]);
-  const opacity = useTransform(v, [700,900], [0,1]);
+  const opacity = useTransform(v, [700, 900], [0, 1]);
   const line = useTransform(v, [1200, 1800], [2240, 70]);
-  const hideWidth = useTransform(v, [900, 1100], [5,0]);
+  const hideWidth = useTransform(v, [900, 1100], [5, 0]);
+  const opacityText = useTransform(v, [1000,1200], [0,1]);
+  const animateText = useTransform(v, [1000,1300], [10,0]);
+
+  const variant = {
+    initial:{opacity: 0, y: 0},
+    animate:{y: animateText.current, opacity: opacityText.current} 
+  }
 
   // increasing container width -> 153px-> 460px from [45vw -> 90vw] can be achieved by useTransorm ==> completed
   // starting from 350 playing with strokeDashOffset and strokeDashArray to 750 ==> completed
@@ -35,16 +42,23 @@ const New = (props) => {
 
   return (
     <section className="flex flex-col m-auto items-center h-[400vh] bg-[#EBEEF4]">
-      <Scrollpage/>
+      <Scrollpage />
       <motion.div
-      style={{ background: `${scrollY.current >= 800 ? `linear-gradient(180deg,rgba(36,69,233,${scrollYProgress.current}),#e3ad85 95.99%)` : 'white'}`}}
-        className={`border-2 border-red-400  sticky top-10  mt-5 rounded-[5rem] py-16`}
-        animate={{ width: `${w.current}vw` }}>
+        style={{
+          background: `${
+            scrollY.current >= 800
+              ? `linear-gradient(180deg,rgba(36,69,233,${scrollYProgress.current}),#e3ad85 95.99%)`
+              : "white"
+          }`,
+        }}
+        className="sticky top-10  mt-5 rounded-[5rem] py-16"
+        animate={{ width: `${w.current}vw` }}
+      >
         <img
           src="/images/phone.png"
           alt="image"
           className="h-[578px] w-[310px] absolute  translate-x-[-50%] translate-y-[-16px] inset-x-1/2 z-10 "
-          style={{opacity: opacity.current}}  
+          style={{ opacity: opacity.current }}
         />
         <svg
           className=" h-[492px] w-[221px] relative  flex m-auto z-20"
@@ -78,6 +92,20 @@ const New = (props) => {
             strokeDasharray={`${ldArray.current} ${lrArray.current}`}
           />
         </svg>
+
+          <motion.h1 initial="initial" animate="animate" variants={variant} className=" hidden md:block lg:text-5xl md:text-4xl text-2xl leading-none text-white absolute top-[25%] right-[calc(60%+15vh)] text-right w-[5rem] md:w-[10rem] lg:w-[12rem]">
+            Smooth Stable Seamless
+          </motion.h1>
+
+          <motion.div initial="initial" animate="animate" variants={variant} className="hidden md:block absolute w-[10rem] md:w-[12rem] top-[45%] text-white left-[calc(60%+15vh)]">
+            <h2 className="text-xl md:text-2xl  lg:text-3xl leading-none">Elevate your experience</h2>
+            <p className="text-xs md:text-sm lg:w-[18rem] lg:text-base w-[14rem] mt-4">
+              OxygenOS glides like silk with next-gen core stability and
+              enhanced reliability. System-level performance is sublimely smooth
+              with HyperBoost and AI System Booster, elevating mobile gaming
+              while ensuring smooth app opening.
+            </p>
+          </motion.div>
 
         <svg
           id="ksp-line"
