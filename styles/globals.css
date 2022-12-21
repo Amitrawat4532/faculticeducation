@@ -16,7 +16,7 @@ body {
 .container {
   position: relative;
 
-  overflow: auto;
+  overflow: hidden;
 }
 .container .section {
   position: relative;
@@ -26,16 +26,16 @@ body {
 .container .section:nth-child(1) {
   /* background: url("../public/images/bgvideo.mp4"); */
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 
 .container .section:nth-child(2) {
   /* background: #f00 url("../public/images/bg.png"); */
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 .container .section:nth-child(3) {
   /* background: rgb(42, 252, 49) url("../public/images/bg.png"); */
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }

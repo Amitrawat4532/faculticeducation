@@ -6,7 +6,7 @@ const newpage = () => {
     <>
       <div className="container">
         <div className="section">
-          <div>
+          <div className="sticky top-0">
             <video
               width="100%"
               height="100%"
@@ -14,7 +14,10 @@ const newpage = () => {
               loop
               autoPlay
               muted
-              style={{ pointerEvents: "none" }}
+              style={{
+                pointerEvents: "none",
+                position: "relative",
+              }}
             >
               <source src="/images/bgvideo.mp4" type="video/mp4" />
             </video>
@@ -25,12 +28,12 @@ const newpage = () => {
             height="200"
             width="220"
             alt="hii"
-            className="fixed top-[7rem] left-[40rem]"
+            className="fixed top-[7rem] left-[40rem] z-10"
           />
         </div>
 
         <div className="section">
-          <div>
+          <div className="z-10">
             <video
               width="100%"
               height="100%"
@@ -40,7 +43,7 @@ const newpage = () => {
               muted
               style={{ pointerEvents: "none" }}
             >
-              <source src="/images/bgvideo.mp4" type="video/mp4" />
+              <source src="/images/bgvideo2.mp4" type="video/mp4" />
             </video>
           </div>
           <div className="content">{/* <h1>hii my name is amit 2</h1> */}</div>
@@ -49,7 +52,7 @@ const newpage = () => {
             height="200"
             width="220"
             alt="hii"
-            className="fixed top-[7rem] left-[40rem]"
+            className="absolute top-[7rem] left-[40rem] z-20"
           />
         </div>
 
@@ -59,12 +62,12 @@ const newpage = () => {
               width="100%"
               height="100%"
               preload="auto"
-              loop
               autoPlay
               muted
-              style={{ pointerEvents: "none" }}
+              loop
+              style={{ pointerEvents: "none", zIndex: "10" }}
             >
-              <source src="/images/bgvideo.mp4" type="video/mp4" />
+              <source src="/images/bgvideo3.mp4" type="video/mp4" />
             </video>
           </div>
           <div className="content">
@@ -74,7 +77,7 @@ const newpage = () => {
               height="200"
               width="220"
               alt="hii"
-              className="fixed top-[7rem] left-[40rem] z-0"
+              className="absolute top-[7rem] left-[40rem] z-20 "
             />
           </div>
         </div>

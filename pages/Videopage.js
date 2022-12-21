@@ -24,7 +24,7 @@ const Videopage = () => {
             >
               <source src="/images/bgvideo.mp4" type="video/mp4" />
             </video>
-            <div className="h-screen w-full  top-[20%] left-[42%]">
+            <div className="h-screen w-full  absolute top-[20%] left-[42%]">
               <Image
                 src="/images/phoneimg.webp"
                 height="200"
