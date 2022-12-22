@@ -2,8 +2,6 @@
 import { motion, motionValue, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 import Dummy from "/components/Dummy";
-import Image from "next/image";
-import Zoom from "./zoom";
 
 const Newtask = () => {
   const { scrollY, scrollYProgress } = useScroll();
