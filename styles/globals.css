@@ -39,3 +39,11 @@ body {
   background-size: cover;
   /* background-attachment: fixed; */
 }
+
+.fixdiv {
+  position: fixed;
+  top: 0;
+
+  text-align: center;
+  color: white;
+}
