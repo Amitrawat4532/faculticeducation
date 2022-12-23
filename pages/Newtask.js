@@ -15,7 +15,7 @@ const Newtask = () => {
 
   const v = motionValue(scrVal);
   const w = useTransform(v, [150, 400], [60, 100]);
-  const scale = useTransform(scrollYProgress, [5, 0], [0.2, 1]);
+  const scale = useTransform(scrollYProgress, [1.3, 0.6], [0.1, 1]);
   // const scaleone = useTransform(scrollYProgress, [6, 0], [0.7, 1]);
   // const scaleone = useTransform(v, [2, 2], [2, 1]);
   // const variants = useTransform(v, [2, 1], [2, 1]);
@@ -74,7 +74,7 @@ const Newtask = () => {
           className="flex items-center flex-col  gap-5 justify-center w-full"
           style={{
             position: "absolute",
-            top: "30%",
+            top: "35%",
             // left: "27%",
             zIndex: "100",
 
@@ -126,12 +126,12 @@ const Newtask = () => {
           {/* <Zoom /> */}
         </div>
         {/* zoom page */}
-        <div className=" flex justify-center items-center absolute top-[50%] w-full">
+        <div className=" flex justify-center items-center absolute top-[60%] w-full">
           <motion.div
             style={{
               display: "flex",
               position: "sticky",
-              top: "0px",
+              top: "20px",
               // scale: scaleone.current,
             }}
           >
