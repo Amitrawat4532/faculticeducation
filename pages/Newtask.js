@@ -15,8 +15,8 @@ const Newtask = () => {
 
   const v = motionValue(scrVal);
   const w = useTransform(v, [150, 400], [60, 100]);
-  const scale = useTransform(scrollYProgress, [1.3, 0.6], [0.1, 1]);
-  // const scaleone = useTransform(scrollYProgress, [6, 0], [0.7, 1]);
+  const scale = useTransform(scrollYProgress, [2.7, 0.4], [0.1, 1]);
+  const scaleone = useTransform(scrollYProgress, [1.3, 0.6], [0.1, 1]);
   // const scaleone = useTransform(v, [2, 2], [2, 1]);
   // const variants = useTransform(v, [2, 1], [2, 1]);
   // const h = useTransform(v, [150, 400], [60, 100]);
@@ -29,7 +29,7 @@ const Newtask = () => {
   // const animateText = useTransform(v, [1300, 1500], [10, 0]);
 
   return (
-    <section className="flex flex-col  items-center h-[300vh] bg-slate-400 ">
+    <section className="flex flex-col  items-center h-[250vh] bg-slate-400 ">
       <Dummy />
       <motion.div
         style={{
@@ -39,7 +39,7 @@ const Newtask = () => {
               : "white"
           }`,
         }}
-        className="sticky   mt-5 rounded-[5rem]  h-[120vh]"
+        className="sticky   mt-5 rounded-[5rem]  h-[130vh]"
         animate={{ width: `${w.current}vw` }}
       >
         {/* backgroundimg */}
@@ -132,13 +132,13 @@ const Newtask = () => {
               display: "flex",
               position: "sticky",
               top: "20px",
-              // scale: scaleone.current,
+              scale: scaleone.scrollYProgress,
             }}
           >
             <motion.div style={{ scale }}>
               <motion.img
                 src="/images/featurephone.webp"
-                style={{ zIndex: "100", height: "900px" }}
+                style={{ zIndex: "100", height: "800px" }}
               />
               <motion.img
                 src="/images/phoneicon1.webp"
@@ -149,6 +149,7 @@ const Newtask = () => {
                   position: "absolute",
                   top: "35%",
                   left: "85%",
+                  scale: scaleone.scrollYProgress,
                 }}
               />
               <motion.img
