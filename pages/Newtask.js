@@ -19,14 +19,16 @@ const Newtask = () => {
   const scale = useTransform(scrollYProgress, [2.7, 0.4], [0.1, 1]);
   // const h = useTransform(v, [150, 400], [60, 100]);
   const opacity = useTransform(v, [1200, 100], [0, 1]);
+  const opacityimg = useTransform(v, [1600, 100], [0, 1]);
   const opacityText = useTransform(v, [100, 800], [0, 1]);
+  // const opacityImg = useTransform(v, [10, 100], [0, 1]);
   // icon transformation section
-  const icon3 = useTransform(scrollYProgress, [0.3, 0.4], [1.1, 0.6]);
+  // const icon3 = useTransform(scrollYProgress, [0.3, 0.4], [1.1, 0.6]);
   // icon transformation section
 
   return (
     <>
-      <section className="flex flex-col  items-center h-[285vh] bg-slate-800 ">
+      <section className="flex flex-col  items-center h-[315vh] bg-slate-800 ">
         <Dummy />
         <motion.div
           style={{
@@ -118,47 +120,79 @@ const Newtask = () => {
                     top: "10px",
                   }}
                 />
-                <motion.img
-                  src="/images/phoneicon1.webp"
-                  width="53"
-                  alt="hii"
-                  style={{
-                    zIndex: "100",
-                    position: "absolute",
-                    top: "35%",
-                    left: "85%",
-                  }}
-                  animate={{
-                    x: 0,
-                    y: 0,
-                    scale: icon3.scrolly,
-                    rotate: 100,
-                  }}
-                />
-                <motion.img
-                  src="/images/phoneicon2.webp"
-                  width="150"
-                  alt="hii"
-                  style={{
-                    zIndex: "100",
-                    position: "absolute",
-                    top: "35%",
-                    left: "57%",
-                    // scaleone,
-                  }}
-                  // animate={{ scale: `${icon3.current}vw` }}
-                />
-                <motion.img
-                  src="/images/phoneicon3.webp"
-                  width="170"
-                  alt="hii"
-                  style={{
-                    zIndex: "100",
-                    position: "absolute",
-                    top: "69%",
-                    left: "58%",
-                  }}
-                />
+                <div>
+                  <motion.div
+                    style={{
+                      zIndex: "100",
+                      position: "absolute",
+                      top: "38%",
+                      left: "78%",
+                      // top: scrollYProgress.current / 12,
+                      // left: scrollY.current / 24,
+                      y: -30,
+                      x: 30,
+                    }}
+                  >
+                    <motion.img
+                      src="/images/phoneicon1.webp"
+                      width="53"
+                      alt="hii"
+                      // position="fixed"
+                      animate={{
+                        y: scrollY.current / 18,
+                        scale: scrollYProgress.current * 4,
+                        x: -scrollY.current / 24,
+                      }}
+                    />
+                  </motion.div>
+
+                  <div>
+                    <motion.div
+                      style={{
+                        zIndex: "100",
+                        position: "absolute",
+                        top: "38%",
+                        left: "57%",
+                        y: -330,
+                        x: 0,
+                        // scaleone,
+                      }}
+                    >
+                      <motion.img
+                        src="/images/phoneicon2.webp"
+                        width="170"
+                        alt="hii"
+                        animate={{
+                          y: scrollY.current / 2.6,
+                          //scale: scrollYProgress.current,
+                          // x: -scrollY.current / 24,
+                        }}
+                        // animate={{ top: scrollYProgress.current }}
+                      />
+                    </motion.div>
+                  </div>
+                  <div>
+                    <motion.div
+                      style={{
+                        zIndex: "100",
+                        position: "absolute",
+                        top: "69%",
+                        left: "58%",
+                        x: -500,
+                        opacity: opacityimg.current,
+                      }}
+                    >
+                      <motion.img
+                        src="/images/phoneicon3.webp"
+                        width="170"
+                        alt="hii"
+                        animate={{
+                          x: scrollY.current / 2.1,
+                        }}
+                      />
+                    </motion.div>
+                  </div>
+                </div>
               </motion.div>
             </motion.div>
           </div>
