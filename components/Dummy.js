@@ -2,7 +2,7 @@ import React from "react";
 
 const Dummy = () => {
   return (
-    <div className="h-screen w-full bg-black flex flex-col justify-center items-center">
+    <div className="h-screen w-full flex flex-col justify-center items-center">
       <h1 className="text-white">Hey this is Dummy text 1</h1>
       <h1 className="text-white">Hey this is Dummy text 2</h1>
       <h1 className="text-white">Hey this is Dummy text 3</h1>

@@ -39,7 +39,7 @@ const Newtask = () => {
             }`,
           }}
           className="sticky   mt-5 rounded-[5rem]  h-[130vh]"
-          animate={{ width: `${w.current}vw` }}
+          animate={{ width: `${w.current / 1}vw` }}
         >
           {/* backgroundimg */}
           <img
@@ -119,6 +119,11 @@ const Newtask = () => {
                     position: "sticky",
                     top: "10px",
                   }}
+                  // animate={{
+                  //   y: scrollY.current,
+                  //   //scale: scrollYProgress.current,
+                  //   // x: -scrollY.current / 24,
+                  // }}
                 />
                 <div>
                   <motion.div
