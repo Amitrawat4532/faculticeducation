@@ -49,7 +49,7 @@ const Animationbox = (props) => {
           maxWidth: "100%",
         }}
         className="sticky top-10   rounded-[5rem] "
-        animate={{ width: `${scrollYProgress.current * 300}vw` }}
+        animate={{ width: `${scrollYProgress.current * 200}vw` }}
       >
         <img
           src="/images/backgroundimg.jpg"

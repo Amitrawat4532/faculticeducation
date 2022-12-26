@@ -38,9 +38,10 @@ const Newtask = () => {
                 ? `white,${scrollYProgress.current}),#e3ad85 95.99%)`
                 : "white"
             }`,
+            minWidth: "50%",
           }}
           className="sticky   mt-5 rounded-[5rem]  h-[130vh]"
-          animate={{ width: `${w.current / 1}vw` }}
+          animate={{ width: `${scrollYProgress.current * 280}vw` }}
         >
           {/* backgroundimg */}
           <img
