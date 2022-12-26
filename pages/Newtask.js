@@ -38,7 +38,9 @@ const Newtask = () => {
                 ? `white,${scrollYProgress.current}),#e3ad85 95.99%)`
                 : "white"
             }`,
+            height: "100vh",
             minWidth: "50%",
+            maxWidth: "100%",
           }}
           className="sticky   mt-5 rounded-[5rem]  h-[130vh]"
           animate={{ width: `${scrollYProgress.current * 280}vw` }}
@@ -104,7 +106,7 @@ const Newtask = () => {
             {/* <Zoom /> */}
           </div>
           {/* zoom page */}
-          <div className=" flex justify-center items-center absolute top-[55%] w-full overflow-y-visible">
+          <div className=" flex justify-center items-center absolute top-[58%] w-full overflow-y-visible">
             <motion.div
               style={{
                 display: "flex",
