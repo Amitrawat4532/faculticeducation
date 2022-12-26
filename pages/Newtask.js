@@ -106,7 +106,7 @@ const Newtask = () => {
             {/* <Zoom /> */}
           </div>
           {/* zoom page */}
-          <div className=" flex justify-center items-center absolute top-[58%] w-full overflow-y-visible">
+          <div className=" flex justify-center items-center absolute top-[62%] w-full overflow-y-visible">
             <motion.div
               style={{
                 display: "flex",
