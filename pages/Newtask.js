@@ -28,8 +28,9 @@ const Newtask = () => {
 
   return (
     <>
-      <section className="flex flex-col  items-center h-[315vh] bg-slate-800 ">
-        <Dummy />
+      {" "}
+      <Dummy />
+      <section className="flex flex-col  items-center h-[185vh] bg-slate-800 ">
         <motion.div
           style={{
             background: `${
