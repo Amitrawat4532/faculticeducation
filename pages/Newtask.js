@@ -30,7 +30,7 @@ const Newtask = () => {
     <>
       {" "}
       <Dummy />
-      <section className="flex flex-col  items-center h-[185vh] bg-slate-800 ">
+      <section className="flex flex-col  items-center h-[185vh] bg-white ">
         <motion.div
           style={{
             background: `${
@@ -42,7 +42,7 @@ const Newtask = () => {
             minWidth: "50%",
             maxWidth: "100%",
           }}
-          className="sticky   mt-5 rounded-[5rem]  h-[130vh]"
+          className="sticky   mt-5 rounded-[5rem]  h-[vh]"
           animate={{ width: `${scrollYProgress.current * 280}vw` }}
         >
           {/* backgroundimg */}
@@ -106,7 +106,7 @@ const Newtask = () => {
             {/* <Zoom /> */}
           </div>
           {/* zoom page */}
-          <div className=" flex justify-center items-center absolute top-[62%] w-full overflow-y-visible">
+          <div className=" flex justify-center items-center absolute top-[64%] w-full overflow-y-visible">
             <motion.div
               style={{
                 display: "flex",
