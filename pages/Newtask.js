@@ -30,7 +30,7 @@ const Newtask = () => {
     <>
       {" "}
       <Dummy />
-      <section className="flex flex-col  items-center h-[185vh] bg-white ">
+      <section className="flex flex-col  items-center h-[185vh] bg-[#ebeef5] ">
         <motion.div
           style={{
             background: `${
