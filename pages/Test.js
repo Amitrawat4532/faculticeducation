@@ -70,7 +70,7 @@ const Animationbox = (props) => {
                 src="/images/featurephone.webp"
                 style={{
                   zIndex: "100",
-                  height: "400px",
+                  height: "600px",
                   position: "sticky",
                   top: "10px",
                 }}
