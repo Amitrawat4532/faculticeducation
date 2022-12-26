@@ -46,7 +46,7 @@ const Newtask = () => {
           <img
             src="/images/backgroundimg.jpg"
             alt="image"
-            className="h-[210vh] w-[full]  rounded-[5rem]"
+            className="h-[250vh] w-[full]  rounded-[5rem]"
             // style={{ opacity: opacity.current }}
             style={{ opacity: opacityText.current }}
           />
