@@ -139,7 +139,6 @@ const CardsMain = ({ divScroll }) => {
             className="two h-[460px] w-[220px] "
             src="../images/card8.png"
             alt="image"
-            anitia
           />
         </motion.div>
       </motion.div>
