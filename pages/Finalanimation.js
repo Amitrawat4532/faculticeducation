@@ -1,5 +1,5 @@
 import { motion, motionValue, useScroll, useTransform } from "framer-motion";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 // import Dummy from "/components/Dummy";
 
@@ -14,6 +14,7 @@ const Newtask = () => {
   }, [scrollY]);
 
   const v = motionValue(scrVal);
+  const w = useTransform(v, [150, 400], [45, 95]);
   //   const w = useTransform(v, [150, 400], [60, 100]);
   //   const scale = useTransform(scrollYProgress, [1, 0.9], [0, 1]);
   // const h = useTransform(v, [150, 400], [60, 100]);
@@ -136,14 +137,17 @@ const Newtask = () => {
             // width: scrollY,
             maxWidth: "100%",
             minWidth: "50%",
-            height: "100vh",
+            height: "95vh",
             position: "sticky",
             top: "0px",
             // borderRadius: borderRadius,
             backgroundImage: "url('/images/backgroundimgdown.jpg')",
             backgroundSize: "100% 100%",
           }}
-          animate={{ width: `${scrollYProgress.current * 280}vw` }}
+          animate={{
+            width: `${scrollYProgress.current * 280}vw`,
+            // y: w.current,
+          }}
         >
           <div className="flex justify-center items-center">
             <div className=" flex justify-center items-center overflow-y-visible">

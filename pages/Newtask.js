@@ -35,7 +35,7 @@ const Newtask = () => {
           style={{
             background: `${
               scrollY.current >= 700
-                ? `white,${scrollYProgress.current}),#e3ad85 95.99%)`
+                ? `white,${scrollYProgress.current},#e3ad85 95.99%)`
                 : "white"
             }`,
             height: "100vh",
