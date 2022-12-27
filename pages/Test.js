@@ -57,7 +57,7 @@ const Animationbox = (props) => {
           className="   h-[190vh] w-full z-10 "
           style={{ opacity: opacity.current }}
         />
-        <div className=" flex justify-center items-center absolute top-[10%] w-full overflow-y-visible z-20">
+        <div className=" flex justify-center  items-center absolute top-[10%] w-full overflow-y-visible z-20">
           <motion.div
             style={{
               display: "flex",
