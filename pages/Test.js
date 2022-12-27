@@ -44,7 +44,7 @@ const Animationbox = (props) => {
               ? `white,${scrollYProgress.current + 5}),#e3ad85 95.99%)`
               : "white"
           }`,
-          height: "120vh",
+          height: "130vh",
           minWidth: "50%",
           maxWidth: "100%",
         }}
@@ -54,7 +54,7 @@ const Animationbox = (props) => {
         <img
           src="/images/backgroundimg.jpg"
           alt="image"
-          className="   h-[180vh] w-full z-10 "
+          className="   h-[190vh] w-full z-10 "
           style={{ opacity: opacity.current }}
         />
         <div className=" flex justify-center items-center absolute top-[10%] w-full overflow-y-visible z-20">
