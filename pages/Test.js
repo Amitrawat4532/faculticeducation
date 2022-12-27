@@ -44,17 +44,17 @@ const Animationbox = (props) => {
               ? `white,${scrollYProgress.current + 5}),#e3ad85 95.99%)`
               : "white"
           }`,
-          height: "100vh",
+          height: "120vh",
           minWidth: "50%",
           maxWidth: "100%",
         }}
         className="sticky top-10   rounded-[5rem] "
-        animate={{ width: `${scrollYProgress.current * 200}vw` }}
+        animate={{ width: `${scrollYProgress.current * 280}vw` }}
       >
         <img
           src="/images/backgroundimg.jpg"
           alt="image"
-          className=" absolute  h-screen w-full z-10 "
+          className="   h-[180vh] w-full z-10 "
           style={{ opacity: opacity.current }}
         />
         <div className=" flex justify-center items-center absolute top-[10%] w-full overflow-y-visible z-20">
