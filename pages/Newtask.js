@@ -11,11 +11,13 @@ const Newtask = () => {
   useEffect(() => {
     scrollY.onChange((latest) => {
       setScrVal(latest);
+      console.log(latest);
     });
   }, [scrollY]);
 
   const v = motionValue(scrVal);
-  const w = useTransform(v, [150, 400], [60, 100]);
+  const w = useTransform(v, [310, 500], [50, 96]);
+
   const scale = useTransform(scrollYProgress, [2.7, 0.4], [0.1, 1]);
   // const h = useTransform(v, [150, 400], [60, 100]);
   const opacity = useTransform(v, [1200, 100], [0, 1]);
@@ -39,11 +41,11 @@ const Newtask = () => {
                 : "white"
             }`,
             height: "100vh",
-            minWidth: "50%",
-            maxWidth: "100%",
+            // minWidth: "50%",
+            // maxWidth: "100%",
           }}
           className="sticky   mt-5 rounded-[5rem]  h-[vh]"
-          animate={{ width: `${scrollYProgress.current * 280}vw` }}
+          animate={{ width: `${w.current}vw` }}
         >
           {/* backgroundimg */}
           <img
