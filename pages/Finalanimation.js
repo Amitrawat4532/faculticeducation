@@ -16,6 +16,13 @@ const Newtask = () => {
 
   const v = motionValue(scrVal);
   const w = useTransform(v, [1312, 1900], [30, 0]);
+  const P = useTransform(v, [1214, 2050], [30, 0]);
+
+  const P1 = useTransform(v, [1214, 2050], [1.3, 3.5]);
+  const P2 = useTransform(v, [1214, 2050], [0, 65]);
+  const P3 = useTransform(v, [1214, 2050], [0, 235]);
+  const Q = useTransform(v, [1214, 2050], [1, 0]);
+  const R = useTransform(v, [1214, 2050], [0, 250]);
 
   //   const w = useTransform(v, [150, 400], [60, 100]);
   //   const scale = useTransform(scrollYProgress, [1, 0.9], [0, 1]);
@@ -24,7 +31,7 @@ const Newtask = () => {
   const opacityimg = useTransform(v, [1900, 100], [0, 1]);
   const opacityText = useTransform(v, [100, 800], [0, 1]);
   // const borderRadius = useTransform(v, [0, 1], ["0px", "50px"]);
-  const scale = useTransform(scrollYProgress, [0, 0.8], [1.3, 1]);
+  // const scale = useTransform(scrollYProgress, [1214, 2050], [1, 5]);
   // const backgroundColor = useTransform(
   //   v,
   //   [0, 1],
@@ -140,7 +147,7 @@ const Newtask = () => {
             // width: scrollY,
             maxWidth: "100%",
             minWidth: "50%",
-            height: "200vh",
+            height: "300vh",
             position: "sticky",
             top: "0px",
             // borderRadius: borderRadius,
@@ -162,22 +169,25 @@ const Newtask = () => {
                       height: "700px",
                       position: "relative",
                       paddingTop: "25px",
-                      // scale,
+                      border: "2px solid black",
                       marginTop: "3rem",
                       marginBottom: "2rem",
+                      marginLeft: "2rem",
                     }}
                   />
 
-                  <div className="absolute top-[33%] left-[53%] flex">
+                  <div className="absolute top-[39%] left-[53%] flex">
                     <motion.div
-                      className="absolute left-[110px] w-[50]"
-                      style={{ top: 50 }}
+                      className="absolute left-[80px] w-[50]"
+                      // style={{ top: 50 }}
                       animate={{
                         // y: scrollY,
                         width: "50",
                         // scale: scrollY.current / 600,
                         // y: scrollY.current / 48,
-                        x: w.current,
+                        x: P.current,
+                        scale: P1.current,
+                        y: P2.current,
                       }}
                     >
                       <motion.img
@@ -189,22 +199,25 @@ const Newtask = () => {
 
                     <motion.div
                       className="relative"
-                      animate={{ y: (scrollY.current / 98) * 13 }}
+                      // animate={{ y: (scrollY.current / 98) * 13 }}
                     >
                       <motion.img
                         src="/images/phoneicon2.webp"
                         width="170"
                         alt="hii"
-
+                        animate={{
+                          y: P3.current,
+                        }}
                         // animate={{ top: scrollYProgress.current }}
                       />
                     </motion.div>
 
                     <motion.div
                       className="absolute top-[120%]"
-                      style={{ opacity: opacityimg.current }}
+                      // style={{ opacity: opacityimg.current }}
                       animate={{
-                        x: (scrollY.current / 120) * 16,
+                        x: R.current,
+                        opacity: Q.current,
                       }}
                     >
                       <motion.img
