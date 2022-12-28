@@ -10,11 +10,13 @@ const Newtask = () => {
   useEffect(() => {
     scrollY.onChange((latest) => {
       setScrVal(latest);
+      console.log(latest);
     });
   }, [scrollY]);
 
   const v = motionValue(scrVal);
-  const w = useTransform(v, [150, 400], [45, 95]);
+  const w = useTransform(v, [1312, 1900], [30, 0]);
+
   //   const w = useTransform(v, [150, 400], [60, 100]);
   //   const scale = useTransform(scrollYProgress, [1, 0.9], [0, 1]);
   // const h = useTransform(v, [150, 400], [60, 100]);
@@ -22,7 +24,7 @@ const Newtask = () => {
   const opacityimg = useTransform(v, [1900, 100], [0, 1]);
   const opacityText = useTransform(v, [100, 800], [0, 1]);
   // const borderRadius = useTransform(v, [0, 1], ["0px", "50px"]);
-  const scale = useTransform(scrollYProgress, [2.7, 0.4], [0.1, 1]);
+  const scale = useTransform(scrollYProgress, [0, 0.8], [1.3, 1]);
   // const backgroundColor = useTransform(
   //   v,
   //   [0, 1],
@@ -39,7 +41,7 @@ const Newtask = () => {
         <h1 className="text-[80px]">Hey this is dummy page</h1>
       </div>
       <div
-        className="bg-white-200 h-[70vh]  flex  justify-center items-start  overflow-visible"
+        className="bg-white-200 h-[70vh]  flex  justify-center items-start  overflow-visible border-2 border-black"
         animate={{ width: `${scrollYProgress.current * 280}vw` }}
         style={{ maxWidth: "100%", minWidth: "50%" }}
       >
@@ -123,7 +125,7 @@ const Newtask = () => {
 
       {/* 2page */}
       <div
-        className="bg-white-200 h-[200vh] w-full flex  justify-center items-start "
+        className="bg-white-200 h-[160vh] w-full flex  justify-center items-start "
         style={
           {
             // overflow: "hidden",
@@ -133,11 +135,12 @@ const Newtask = () => {
       >
         {/*Hello</div> */}
         <motion.div
+          className="border-2 border-black"
           style={{
             // width: scrollY,
             maxWidth: "100%",
             minWidth: "50%",
-            height: "95vh",
+            height: "200vh",
             position: "sticky",
             top: "0px",
             // borderRadius: borderRadius,
@@ -149,8 +152,8 @@ const Newtask = () => {
             // y: w.current,
           }}
         >
-          <div className="flex justify-center items-center">
-            <div className=" flex justify-center items-center overflow-y-visible">
+          <div className=" sticky top-[0px]">
+            <div className=" flex justify-center items-center overflow-y-visible ">
               <div>
                 <motion.div>
                   <motion.img
@@ -159,6 +162,9 @@ const Newtask = () => {
                       height: "700px",
                       position: "relative",
                       paddingTop: "25px",
+                      // scale,
+                      marginTop: "3rem",
+                      marginBottom: "2rem",
                     }}
                   />
 
@@ -169,9 +175,9 @@ const Newtask = () => {
                       animate={{
                         // y: scrollY,
                         width: "50",
-                        scale: scrollY.current / 600,
-                        y: scrollY.current / 48,
-                        x: -scrollY.current / 32,
+                        // scale: scrollY.current / 600,
+                        // y: scrollY.current / 48,
+                        x: w.current,
                       }}
                     >
                       <motion.img
@@ -213,6 +219,9 @@ const Newtask = () => {
             </div>
           </div>
         </motion.div>
+      </div>
+      <div className="h-screen flex justify-center items-center">
+        <h1 className="text-[80px]">Hey this is dummy page</h1>
       </div>
     </>
   );
