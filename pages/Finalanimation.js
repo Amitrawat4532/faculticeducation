@@ -16,7 +16,7 @@ const Newtask = () => {
 
   const v = motionValue(scrVal);
   const w = useTransform(v, [1312, 1900], [30, 0]);
-  const P = useTransform(v, [1214, 2050], [30, 0]);
+  const P = useTransform(v, [1214, 2050], [30, -10]);
 
   const P1 = useTransform(v, [1214, 2050], [1.3, 3.5]);
   const P2 = useTransform(v, [1214, 2050], [0, 65]);
@@ -30,17 +30,6 @@ const Newtask = () => {
   const opacity = useTransform(v, [1200, 100], [0, 1]);
   const opacityimg = useTransform(v, [1900, 100], [0, 1]);
   const opacityText = useTransform(v, [100, 800], [0, 1]);
-  // const borderRadius = useTransform(v, [0, 1], ["0px", "50px"]);
-  // const scale = useTransform(scrollYProgress, [1214, 2050], [1, 5]);
-  // const backgroundColor = useTransform(
-  //   v,
-  //   [0, 1],
-  //   ["red", "url('/images/backgroundimgdown.jpg')"]
-  // );
-  // const opacityImg = useTransform(v, [10, 100], [0, 1]);
-  // icon transformation section
-  // const icon3 = useTransform(scrollYProgress, [0.3, 0.4], [1.1, 0.6]);
-  // icon transformation section
 
   return (
     <>
