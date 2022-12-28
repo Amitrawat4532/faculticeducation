@@ -37,7 +37,7 @@ const Newtask = () => {
         <h1 className="text-[80px]">Hey this is dummy page</h1>
       </div>
       <div
-        className="bg-white-200 h-[70vh]  flex  justify-center items-start  overflow-visible border-2 border-black"
+        className="bg-white-200 h-[70vh]  flex  justify-center items-start  overflow-visible "
         animate={{ width: `${scrollYProgress.current * 280}vw` }}
         style={{ maxWidth: "100%", minWidth: "50%" }}
       >
@@ -222,7 +222,7 @@ const Newtask = () => {
           </div>
         </motion.div>
       </div>
-      <div className="h-screen flex justify-center items-center">
+      <div className="h-screen flex justify-center items-center z-50">
         <h1 className="text-[80px]">Hey this is dummy page</h1>
       </div>
     </>
