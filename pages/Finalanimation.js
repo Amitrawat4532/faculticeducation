@@ -18,7 +18,7 @@ const Newtask = () => {
   const w = useTransform(v, [1312, 1900], [30, 0]);
   const P = useTransform(v, [1214, 2050], [30, 0]);
 
-  const P1 = useTransform(v, [1214, 2050], [1.3, 3.5]);
+  const P1 = useTransform(v, [1214, 2050], [1.3, 3.4]);
   const P2 = useTransform(v, [1214, 2050], [0, 65]);
   const P3 = useTransform(v, [1214, 2050], [0, 235]);
   const Q = useTransform(v, [1214, 2050], [1, 0]);
@@ -142,7 +142,7 @@ const Newtask = () => {
       >
         {/*Hello</div> */}
         <motion.div
-          className="border-2 border-black"
+          // className="border-2 border-black"
           style={{
             // width: scrollY,
             maxWidth: "100%",
@@ -169,7 +169,7 @@ const Newtask = () => {
                       height: "700px",
                       position: "relative",
                       paddingTop: "25px",
-                      border: "2px solid black",
+                      // border: "2px solid black",
                       marginTop: "3rem",
                       marginBottom: "2rem",
                       marginLeft: "2rem",
