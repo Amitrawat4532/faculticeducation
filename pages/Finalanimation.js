@@ -223,9 +223,6 @@ const Newtask = () => {
           </div>
         </motion.div>
       </div>
-      <div className="h-screen flex justify-center items-center">
-        <h1 className="text-[80px]">Hey this is dummy page</h1>
-      </div>
     </>
   );
 };
