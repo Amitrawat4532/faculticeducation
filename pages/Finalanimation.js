@@ -42,6 +42,7 @@ const Newtask = () => {
         style={{ maxWidth: "100%", minWidth: "50%" }}
       >
         {/*Hello</div> */}
+        {/*  */}
         <motion.div
           // className=" border-2 border-black"
           style={{
