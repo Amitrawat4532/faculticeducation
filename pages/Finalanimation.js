@@ -183,7 +183,7 @@ const Newtask = () => {
                     >
                       <motion.img
                         src="/images/phoneicon1.webp"
-                        width="53"
+                        width="51"
                         alt="hii"
                       />
                     </motion.div>
