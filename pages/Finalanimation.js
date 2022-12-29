@@ -16,10 +16,11 @@ const Newtask = () => {
 
   const v = motionValue(scrVal);
   const w = useTransform(v, [1312, 1900], [30, 0]);
-  const P = useTransform(v, [1214, 2050], [30, -10]);
+  const S = useTransform(v, [900, 1150], [1, 0.85]);
+  const P = useTransform(v, [1214, 2050], [30, -10]); // x axis
 
-  const P1 = useTransform(v, [1214, 2050], [1.3, 3.8]);
-  const P2 = useTransform(v, [1214, 2050], [0, 48]);
+  const P1 = useTransform(v, [1214, 2050], [1.2, 3.5]); //scale
+  const P2 = useTransform(v, [1214, 2050], [-3, 60]);   //y axis
   const P3 = useTransform(v, [1214, 2050], [0, 235]);
   const Q = useTransform(v, [1214, 2050], [1, 0]);
   const R = useTransform(v, [1214, 2050], [0, 250]);
@@ -122,7 +123,7 @@ const Newtask = () => {
 
       {/* 2page */}
       <div
-        className="bg-white-200 h-[200vh] w-full flex  justify-center items-start "
+        className="bg-white-200 h-[250vh] w-full flex  justify-center items-start "
         style={
           {
             // overflow: "hidden",
@@ -149,10 +150,10 @@ const Newtask = () => {
             // y: w.current,
           }}
         >
-          <div className=" sticky top-[0px]">
+          <motion.div animate={{scale: S.current}} className=" sticky top-[0px] ">
             <div className=" flex justify-center items-center overflow-y-visible ">
               <div>
-                <motion.div>
+                <motion.div className="">
                   <motion.img
                     src="/images/featurephone.webp"
                     style={{
@@ -203,7 +204,7 @@ const Newtask = () => {
                     </motion.div>
 
                     <motion.div
-                      className="absolute top-[120%]"
+                      className="absolute top-[115%]"
                       // style={{ opacity: opacityimg.current }}
                       animate={{
                         x: R.current,
@@ -211,8 +212,9 @@ const Newtask = () => {
                       }}
                     >
                       <motion.img
+                      className="scale-[1.05]"
                         src="/images/phoneicon3.webp"
-                        width="170"
+                        // width="170"
                         alt="hii"
                       />
                     </motion.div>
@@ -220,7 +222,7 @@ const Newtask = () => {
                 </motion.div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </>
