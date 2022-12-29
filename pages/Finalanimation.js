@@ -38,14 +38,14 @@ const Newtask = () => {
         <h1 className="text-[80px]">Hey this is dummy page</h1>
       </div>
       <div
-        className="bg-white-200   flex  justify-center items-start  overflow-visible  h-[40vh]  md:h-[50vh] xl:h-[50vh] 2xl:h-[50vh]"
+        className="bg-white-200   flex  justify-center items-start  overflow-visible  h-[40vh]  md:h-[50vh] xl:h-[50vh] 2xl:h-[67vh]"
         animate={{ width: `${scrollYProgress.current * 280}vw` }}
         style={{ maxWidth: "100%", minWidth: "50%" }}
       >
         {/*Hello</div> */}
         {/*  */}
         <motion.div
-          className=" border-2 border-black"
+          // className=" border-2 border-black"
           style={{
             maxWidth: "100%",
             minWidth: "50%",
@@ -123,7 +123,7 @@ const Newtask = () => {
 
       {/* 2page */}
       <div
-        className="bg-white-200 h-[250vh] w-full flex  justify-center items-start border-3 border-red-800  "
+        className="bg-white-200 h-[250vh] w-full flex  justify-center items-start  "
         style={
           {
             // overflow: "hidden",
@@ -133,7 +133,7 @@ const Newtask = () => {
       >
         {/*Hello</div> */}
         <motion.div
-          className="border-4 border-black"
+          // className="border-4 border-black"
           style={{
             // width: scrollY,
             maxWidth: "100%",
@@ -152,11 +152,11 @@ const Newtask = () => {
         >
           <motion.div
             animate={{ scale: S.current }}
-            className=" sticky top-[0px] border-3 border-black"
+            className=" sticky top-[0px]"
           >
-            <div className=" flex justify-center items-center overflow-y-visible border-3 border-black ">
-              <div className="border-3 border-black">
-                <motion.div className="border-3 border-black">
+            <div className=" flex justify-center items-center overflow-y-visible  ">
+              <div className="">
+                <motion.div className="">
                   <motion.img
                     src="/images/featurephone.webp"
                     style={{
