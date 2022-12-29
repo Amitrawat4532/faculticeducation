@@ -20,7 +20,7 @@ const Newtask = () => {
   const P = useTransform(v, [1214, 2050], [30, -10]); // x axis
 
   const P1 = useTransform(v, [1214, 2050], [1.2, 3.5]); //scale
-  const P2 = useTransform(v, [1214, 2050], [-3, 60]);   //y axis
+  const P2 = useTransform(v, [1214, 2050], [-3, 60]); //y axis
   const P3 = useTransform(v, [1214, 2050], [0, 235]);
   const Q = useTransform(v, [1214, 2050], [1, 0]);
   const R = useTransform(v, [1214, 2050], [0, 250]);
@@ -150,7 +150,10 @@ const Newtask = () => {
             // y: w.current,
           }}
         >
-          <motion.div animate={{scale: S.current}} className=" sticky top-[0px] ">
+          <motion.div
+            animate={{ scale: S.current }}
+            className=" sticky top-[0px] "
+          >
             <div className=" flex justify-center items-center overflow-y-visible ">
               <div>
                 <motion.div className="">
@@ -212,7 +215,7 @@ const Newtask = () => {
                       }}
                     >
                       <motion.img
-                      className="scale-[1.05]"
+                        className="scale-[1.05]"
                         src="/images/phoneicon3.webp"
                         // width="170"
                         alt="hii"
