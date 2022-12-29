@@ -18,8 +18,8 @@ const Newtask = () => {
   const w = useTransform(v, [1312, 1900], [30, 0]);
   const P = useTransform(v, [1214, 2050], [30, -10]);
 
-  const P1 = useTransform(v, [1214, 2050], [1.3, 3.4]);
-  const P2 = useTransform(v, [1214, 2050], [0, 65]);
+  const P1 = useTransform(v, [1214, 2050], [1.3, 3.8]);
+  const P2 = useTransform(v, [1214, 2050], [0, 48]);
   const P3 = useTransform(v, [1214, 2050], [0, 235]);
   const Q = useTransform(v, [1214, 2050], [1, 0]);
   const R = useTransform(v, [1214, 2050], [0, 250]);
@@ -166,9 +166,9 @@ const Newtask = () => {
                     }}
                   />
 
-                  <div className="absolute top-[39%] left-[53%] flex">
+                  <div className="absolute top-[35%] left-[53%] flex">
                     <motion.div
-                      className="absolute left-[70px] w-[50]"
+                      className="absolute left-[78px] w-[50] top-[8px]"
                       // style={{ top: 50 }}
                       animate={{
                         // y: scrollY,
