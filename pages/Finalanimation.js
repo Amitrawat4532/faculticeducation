@@ -121,7 +121,7 @@ const Newtask = () => {
 
       {/* 2page */}
       <div
-        className="bg-white-200 h-[160vh] w-full flex  justify-center items-start "
+        className="bg-white-200 h-[200vh] w-full flex  justify-center items-start "
         style={
           {
             // overflow: "hidden",
@@ -136,7 +136,7 @@ const Newtask = () => {
             // width: scrollY,
             maxWidth: "100%",
             minWidth: "50%",
-            height: "300vh",
+            // height: "300%",
             position: "sticky",
             top: "0px",
             // borderRadius: borderRadius,
@@ -159,7 +159,7 @@ const Newtask = () => {
                       position: "relative",
                       paddingTop: "25px",
                       // border: "2px solid black",
-                      marginTop: "3rem",
+                      // marginTop: "3rem",
                       marginBottom: "2rem",
                       marginLeft: "2rem",
                     }}
@@ -167,7 +167,7 @@ const Newtask = () => {
 
                   <div className="absolute top-[39%] left-[53%] flex">
                     <motion.div
-                      className="absolute left-[80px] w-[50]"
+                      className="absolute left-[70px] w-[50]"
                       // style={{ top: 50 }}
                       animate={{
                         // y: scrollY,
