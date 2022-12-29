@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion, useScroll } from "framer-motion";
+
 import CardsMain from "./CardsMain";
+import Scrollpage from "./Scrollpage";
+import Skills from "./Skills";
 
 export default function Motion() {
-  const { scrollY } = useScroll();
+  const { scrollY, scrollYProgress } = useScroll();
   const [scrollDone, setScrollDOne] = useState(false);
   const [scrollVal, setScrollVal] = useState(0);
+  const [divScroll, setDivScroll] = useState(0);
 
   if (typeof window !== "undefined") {
     // browser code
     window.addEventListener("scroll", () => {
-      setScrollVal(window.pageYOffset / 5);
+      // console.log(scrollYProgress.current, "----scroll y progres");
+      setScrollVal(window.pageYOffset / 4);
       if (scrollY.current >= 410) {
         setScrollDOne(true);
       } else {
@@ -19,29 +24,66 @@ export default function Motion() {
     });
   }
 
+  const getScroll = (event) => {
+    const { scrollTop } = event.target;
+    if (scrollTop <= 800) {
+      setDivScroll(scrollTop);
+    } else if (scrollTop === 400) {
+      // We are at the bottom
+    }
+  };
+
+  console.log(scrollVal);
+
   return (
     <>
       <motion.div
-        className="  flex-col  flex  fixed"
+        onScroll={(e) => getScroll(e)}
+        className="  flex-col flex fixed "
         style={{
-          background: "#625e5e82",
+          background: "white",
           width: "100vw",
           height: "100vh",
           maxWidth: "115vw",
           opacity: 1,
           clipPath: `circle(${scrollY.current / 5}% at 50% 50%)`,
           zIndex: "10",
+          // transition: ".2s all ease",
+          overflowX: "hidden",
+          overflowY: scrollYProgress.current > 0.97 ? "scroll" : "hidden",
+          // overflowY: "scroll",
         }}
       >
         <motion.div
           style={{
-            // zIndex: "40",
-            transform: `translateY(${-scrollY.current / 2}px)`,
+            position: "relative",
+            opacity: scrollYProgress,
           }}
         >
-          <CardsMain />
+          <CardsMain scrollCheck={scrollYProgress} divScroll={divScroll / 5} />
+          <Scrollpage />
+          <Skills />
         </motion.div>
       </motion.div>
+
+      {/* <motion.div
+        style={{
+          overflowX: "hidden",
+          // height: "100%",
+          // overflow: "scroll",
+          // overflowY: scrollYProgress.current > 0.1 ? "scroll" : "hidden",
+          // zIndex: "40",
+          // transition: ".2s all ease",
+          // transform: `scale(${
+          //   scrollYProgress.current < 0.1 && 1.1 - scrollYProgress.current
+          // })`,
+          // scale:
+          //   scrollYProgress.current < 0.2 &&
+          //   `${1.2 - scrollYProgress.current}`,
+        }}
+      >
+      </motion.div> */}
+      {/* <Skills /> */}
     </>
   );
 }
