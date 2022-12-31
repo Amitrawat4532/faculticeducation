@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 // import Dummy from "/components/Dummy";
 
 const Newtask = () => {
-  const { scrollY, scrollYProgress, scrollX } = useScroll();
+  const { scrollY, scrollYProgress } = useScroll();
   const [scrVal, setScrVal] = useState(scrollY.current);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const Newtask = () => {
   //   const scale = useTransform(scrollYProgress, [1, 0.9], [0, 1]);
   // const h = useTransform(v, [150, 400], [60, 100]);
   const opacity = useTransform(v, [1200, 100], [0, 1]);
-  const opacityimg = useTransform(v, [1900, 100], [0, 1]);
+  // const opacityimg = useTransform(v, [1900, 100], [0, 1]);
   const opacityText = useTransform(v, [100, 800], [0, 1]);
 
   return (
