@@ -291,6 +291,7 @@
 import { motion, motionValue, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 import Scrollpage from "/components/Scrollpage";
+import { hydrate } from "react-dom";
 
 const Animationbox = (props) => {
   const { scrollY, scrollYProgress } = useScroll();
@@ -446,3 +447,6 @@ const Animationbox = (props) => {
 };
 
 export default Animationbox;
+
+
+// hydrate
